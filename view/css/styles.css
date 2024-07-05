@@ -1,0 +1,274 @@
+/* ESTILOS GENERALES */
+body {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+/* ESTILOS DE HEADER */
+.header, .header__info {
+    display: flex;
+    align-items: center;
+}
+.header {
+    justify-content: space-between;
+    height: 8vh;
+    padding: 0 10vw;
+}
+.header__info {
+    height: 7vh;
+    gap: 15px;
+}
+.header__logo {
+    height: 100%;
+}
+.header__title {
+    font-size: 40px;
+    color: #f81b1b;
+}
+.header__form {
+    position: relative;
+}
+.header__input {
+    width: 25vw;
+    padding: 5px 7px;
+    font-size: 15px;
+    outline: none;
+}
+.header__button, .header__icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.header__button {
+    position: absolute;
+    top: 7px;
+    right: 6px;
+    color: #f81b1b;
+}
+.header__icon {
+    display: none;
+    font-size: 24px;
+}
+
+/* EFECTOS DE HEADER */
+.header__input:focus {
+    border: 1px solid #f81b1b;
+}
+
+/* ESTILOS DE NAVBAR */
+.nav, .categories__menu {
+    display: flex;
+    justify-content: space-between;
+}
+.nav, .responsive {
+    background-color: #3d464d;
+}
+.nav {
+    height: 7vh;
+    padding: 0 10vw;
+}
+.nav__categories {
+    width: 20vw;
+    background-color: #ffd333;
+}
+.categories__menu {
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    font-weight: 700;
+}
+.categories__menu > i {
+    margin-top: -2px;
+    font-size: 22px;
+}
+.categories__title {
+    display: flex;
+    gap: 10px;
+}
+.categories__list {
+    max-height: 0px;
+    overflow: hidden;
+    background-color: #f3f2f2;
+    border-left: 1px solid #3d464d;
+    border-right: 1px solid #3d464d;
+    /* Tiempo de transición de retorno de dropdown */
+    transition-duration: 0.7s;
+}
+.categories__link {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    color: #3d464d;
+    border-bottom: 1px solid black;
+}
+.nav__list, .nav__icons {
+    display: flex;
+    align-items: center;
+}
+.nav__list {
+    gap: 50px;
+    width: 50vw;
+    padding: 0 20px;
+}
+.nav__link {
+    color: #fff;
+}
+.nav__icons {
+    gap: 30px;
+}
+.nav__icons i {
+    color: #ffd333;
+}
+.nav__icons span {
+    margin-left: 3px;
+    color: #fff;
+}
+
+/* EFECTOS DE NAVBAR*/
+.categories:hover .categories__list{
+    max-height: 85vh;
+    /* Tiempo de transición de salida de dropdown */
+    transition-duration: 1.5s;
+}
+.categories__link:hover {
+    font-weight: 500;
+    color: #666;
+}
+.categories__link:active {
+    color: #000;
+}
+.nav__link:hover {
+    color: #ffd333;
+}
+.nav__link:active {
+    color: #e6b609;
+}
+.nav__icons i:hover {
+    color: #e6b609;
+}
+.nav__icons i:active {
+    color: #dbac03;
+}
+
+/* ESTILOS DE RESPONSIVE */
+.responsive {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 100vh;
+    width: 70vw;
+    padding: 50px 30px;
+    transition-duration: 1.5s;
+}
+.responsive__icon {
+    align-self: flex-end;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* ESTILOS EN LAPTOP */
+@media (width <= 1024px) {
+    .header__title {
+        font-size: 35px;
+    }
+}
+
+/* ESTILOS EN TABLET */
+@media (width <= 768px) {
+    .header {
+        padding: 0 8vw;
+    }
+    .nav {
+        padding: 0 8vw;
+    }
+    .nav__categories {
+        width: 25vw;
+    }
+    .nav__list {
+        width: 40vw;
+    }
+}
+
+/* ESTILOS EN CELULAR L */
+@media (width <= 425px) {
+    .header {
+        padding: 0 5vw;
+    }
+    .header__info {
+        gap: 5px;
+    }
+    .header__logo {
+        height: 70%;
+    }
+    .header__title {
+        font-size: 28px;
+    }
+    .header__form, .nav {
+        display: none;
+    }
+    .header__input {
+        width: 100%;
+    }
+    .header__icon {
+        display: block;
+    }
+    .nav__icons {
+        justify-content: space-between;
+    }
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        padding: 0;
+    }
+    .nav__categories {
+        width: 100%;
+        background-color: transparent;
+    }
+    .categories__menu {
+        height: fit-content;
+        width: fit-content;
+        padding: 0;
+        color: #fff;
+    }
+    .categories__title {
+        margin-right: 5px;
+    }
+    .categories__list {
+        margin-top: 10px;
+        background-color: transparent;
+        border: none;
+    }
+    .categories__link {
+        padding: 10px 0;
+        color: #fff;
+        border: none;
+    }
+    .categories__link:hover {
+        font-weight: 400;
+        color: #ffd333;
+    }
+    .responsive__form {
+        display: block;
+    }
+}
+
+/* ESTILOS EN CELULAR S */
+@media (width <= 320px) {
+    .header__title {
+        font-size: 24px;
+    }
+}
