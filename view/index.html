@@ -8,9 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Ícono -->
+    <link rel="icon" href="assets/img/logo.ico">
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/users.css">
+    <link rel="stylesheet" href="css/index.css">
     <!-- Íconos -->
     <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
 </head>
@@ -18,8 +21,8 @@
     <!-- HEADER -->
     <header class="header">
         <a href="index.html" class="header__info">
-            <img src="assets/img/logo.jpg" alt="Logo" class="header__logo">
-            <h1 class="header__title">EL HUARANGAL</h1>
+            <img src="assets/img/logo.webp" alt="Logo" class="header__logo">
+            <h1 class="header__name">EL HUARANGAL</h1>
         </a>
         <form action="#" method="post" class="header__form">
             <input type="text" class="header__input" placeholder="Buscar en la tienda">
@@ -47,7 +50,7 @@
             </ul>
         </div>
         <ul class="nav__list">
-            <li><a href="#" class="nav__link">Inicio</a></li>
+            <li><a href="#" class="nav__link link--active">Inicio</a></li>
             <li><a href="#" class="nav__link">Nosotros</a></li>
             <li><a href="#" class="nav__link">Productos</a></li>
         </ul>
@@ -97,6 +100,45 @@
         </ul>
     </nav>
 
-    <script src="js/menu.js"></script>
+    <main></main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__nav footer__company">
+            <img src="assets/img/logo.webp" alt="logo" class="footer__logo">
+            <p><strong>Ferretería El Huarangal</strong></p>
+            <p>RUC: 20603020015</p>
+        </div>
+        <nav class="footer__nav">
+            <h3 class="footer__title">Navegación</h3>
+            <ul class="footer__list">
+                <li><a href="#" class="footer__link">Inicio</a></li>
+                <li><a href="#" class="footer__link">Nosotros</a></li>
+                <li><a href="#" class="footer__link">Productos</a></li>
+            </ul>
+        </nav>
+        <nav class="footer__nav">
+            <h3 class="footer__title">Categorías</h3>
+            <ul class="footer__list">
+                <li><a href="#" class="footer__link">Herramientas</a></li>
+                <li><a href="#" class="footer__link">Construcción</a></li>
+                <li><a href="#" class="footer__link">Carpintería</a></li>
+                <li><a href="#" class="footer__link">Electricidad</a></li>
+            </ul>
+        </nav>
+        <div class="footer__nav footer__contact">
+            <h3 class="footer__title">Contacto</h3>
+            <ul class="footer__list">
+                <li class="footer__info"><i class="fa-solid fa-phone"></i>941 829 053</li>
+                <li class="footer__info"><i class="fa-solid fa-envelope"></i>elhuarangal@gmail.com</li>
+                <li class="footer__info"><i class="fa-solid fa-location-dot"></i>PJ Alto Selva Alegre Zona C
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copyright">&copy; El Huarangal 2024. Todos los derechos reservados</div>
+    <a href="https://api.whatsapp.com/send?phone=51978634490" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <script src="js/users.js"></script>
 </body>
 </html>
