@@ -5,6 +5,7 @@
     --nav-link: #fff;
     --nav-link-hover: #ffd333;
     --categorie-active: #000;
+    --product-shadow: #68676733;
 }
 
 /* ESTILOS GENERALES */
@@ -101,20 +102,22 @@ li {
     gap: 10px;
 }
 .categories__list {
+    position: relative;
     max-height: 0px;
     overflow: hidden;
     background-color: #f3f2f2;
-    border-left: 1px solid var(--nav);
-    border-right: 1px solid var(--nav);
+    border-left: 1px solid inherit;
+    border-right: 1px solid inherit;
     /* Tiempo de transición de retorno de dropdown */
     transition-duration: 0.7s;
+    z-index: 1;
 }
 .categories__link {
     display: block;
     width: 100%;
     padding: 10px 20px;
     color: var(--nav);
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--categorie-active);
 }
 .nav__list, .nav__icons {
     display: flex;
@@ -174,6 +177,7 @@ li {
     width: 70vw;
     padding: 50px 30px;
     transition-duration: 1.5s;
+    z-index: 1;
 }
 .responsive__icon {
     align-self: flex-end;
@@ -246,7 +250,7 @@ li {
     color: var(--nav-link);
 }
 
-/* ESTILOS EN LAPTOP */
+/* ESTILOS EN LAPTOP S */
 @media (width <= 1024px) {
     .header__name {
         font-size: 35px;
