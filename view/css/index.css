@@ -62,13 +62,6 @@
     transition-duration: 0.5s;
 }
 
-/* ESTILOS DE PRODUCTOS */
-.products__title {
-    margin-bottom: 50px;
-    background-color: var(--nav);
-    color: var(--nav-link-hover);
-}
-
 /* EFECTOS DE BENEFICIOS*/
 .benefit:hover .benefit__img {
     filter: brightness(0.9) blur(1px);;
@@ -76,6 +69,43 @@
 }
 .benefit:hover .benefit__p {
     opacity: 1;
+}
+
+/* ESTILOS DE PRODUCTOS */
+.products__title {
+  margin-bottom: 50px;
+  background-color: var(--nav);
+  color: var(--nav-link-hover);
+}
+
+/* ESTILOS DE SLIDER */
+.slider {
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+} 
+.slide-track {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: scroll 40s linear infinite;
+  width: calc(200px * 14);
+}
+.slide {
+  width: 150px;
+}
+.slide img {
+  width: 100%;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-200px * 7));
+  }
 }
 
 /* ESTILOS EN LAPTOP L */
@@ -114,6 +144,9 @@
     }
     .main__p {
         font-size: 23px;
+    }
+    .slider {
+      width: 90vw;
     }
 }
 

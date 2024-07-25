@@ -34,7 +34,7 @@
 .product__icons {
     position: absolute;
     text-align: center;
-    width: 100%;
+    width: fit-content;
     opacity: 0;
     transition-duration: 0.5s;
 }
