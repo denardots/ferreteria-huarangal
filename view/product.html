@@ -13,12 +13,12 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/users.css">
-  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/product.css">
   <!-- Íconos -->
   <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- HEADER -->
+    <!-- HEADER -->
   <header class="header">
     <a href="index.html" class="header__info">
       <img src="assets/img/logo.webp" alt="Logo" class="header__logo">
@@ -26,11 +26,10 @@
     </a>
     <form action="#" method="post" class="header__form">
       <input type="text" class="header__input" placeholder="Buscar en la tienda">
-      <button type="submit" class="header__button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button type="submit" class="header__button"><i class="fa-solid fa-magnifying-glass"></i>
+      </button>
     </form>
-    <button id="headerIcon" class="header__icon">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+    <button id="headerIcon" class="header__icon"><i class="fa-solid fa-bars"></i></button>
   </header>
 
   <!-- NAVBAR -->
@@ -63,7 +62,8 @@
 
   <!-- RESPONSIVE -->
   <nav id="responsive" class="responsive">
-    <button id="responsiveIcon" class="responsive__icon"></button><i class="fa-solid fa-xmark"></i></button>
+    <button id="responsiveIcon" class="responsive__icon"><i class="fa-solid fa-xmark"></i>
+    </button>
     <form action="#" method="post" class="header__form responsive__form">
       <input type="text" class="header__input" placeholder="Buscar en la tienda">
       <button type="submit" class="header__button"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -81,8 +81,8 @@
       <li><a href="#" class="nav__link link--active">Productos</a></li>
       <li class="nav__categories categories">
         <div class="categories__menu">
-            <p class="categories__title">Categorías</p>
-            <i class="fa-solid fa-caret-down"></i>
+          <p class="categories__title">Categorías</p>
+          <i class="fa-solid fa-caret-down"></i>
         </div>
         <ul class="categories__list">
           <li><a href="#" class="categories__link">Herramientas</a></li>
@@ -95,45 +95,43 @@
   </nav>
 
   <!-- PRODUCTOS -->
-  <section class="products">
-    <h2 class="products__title">NUESTROS PRODUCTOS</h2>
-    <div class="product-container">
-      <article class="product">
-        <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-        <div class="product__content">
-          <p>Nombre del Producto</p>
-          <p>S/99.99</p>
-        </div>
-        <div class="product__icons">
-          <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-          <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-        </div>
-      </article>
-    </div>
+  <section class="product">
+    <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
+    <article class="product__content">
+      <h2 class="product__title">Nombre del Producto</h2>
+      <h3 class="product__price">S/99.99</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi libero mollitia atque maxime. Ad a commodi, odit consequatur totam quam necessitatibus placeat dignissimos nulla impedit, voluptate vel expedita ratione quia?</p>
+      <div class="product__actions">
+        <button class="product__icon"><i class="fa-solid fa-minus"></i></button>
+        <span class="product__quantity">1</span>
+        <button class="product__icon"><i class="fa-solid fa-plus"></i></button>
+      </div>
+      <button class="product__button">Agregar al Carrito</button>
+    </article>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__nav footer__company">
-      <img src="assets/img/logo.webp" alt="logo" class="footer__logo">
-      <p><strong>Ferretería El Huarangal</strong></p>
-      <p>RUC: 20603020015</p>
+        <img src="assets/img/logo.webp" alt="logo" class="footer__logo">
+        <p><strong>Ferretería El Huarangal</strong></p>
+        <p>RUC: 20603020015</p>
     </div>
     <nav class="footer__nav">
       <h3 class="footer__title">Navegación</h3>
       <ul class="footer__list">
-          <li><a href="#" class="footer__link">Inicio</a></li>
-          <li><a href="#" class="footer__link">Nosotros</a></li>
-          <li><a href="#" class="footer__link">Productos</a></li>
+        <li><a href="#" class="footer__link">Inicio</a></li>
+        <li><a href="#" class="footer__link">Nosotros</a></li>
+        <li><a href="#" class="footer__link">Productos</a></li>
       </ul>
     </nav>
     <nav class="footer__nav">
       <h3 class="footer__title">Categorías</h3>
       <ul class="footer__list">
-          <li><a href="#" class="footer__link">Herramientas</a></li>
-          <li><a href="#" class="footer__link">Construcción</a></li>
-          <li><a href="#" class="footer__link">Carpintería</a></li>
-          <li><a href="#" class="footer__link">Electricidad</a></li>
+        <li><a href="#" class="footer__link">Herramientas</a></li>
+        <li><a href="#" class="footer__link">Construcción</a></li>
+        <li><a href="#" class="footer__link">Carpintería</a></li>
+        <li><a href="#" class="footer__link">Electricidad</a></li>
       </ul>
     </nav>
     <div class="footer__nav footer__contact">
@@ -141,8 +139,7 @@
       <ul class="footer__list">
         <li class="footer__info"><i class="fa-solid fa-phone"></i>941 829 053</li>
         <li class="footer__info"><i class="fa-solid fa-envelope"></i>elhuarangal@gmail.com</li>
-        <li class="footer__info"><i class="fa-solid fa-location-dot"></i>PJ Alto Selva Alegre Zona C
-        </li>
+        <li class="footer__info"><i class="fa-solid fa-location-dot"></i>PJ Alto Selva Alegre Zona C</li>
       </ul>
     </div>
   </footer>

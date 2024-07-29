@@ -1,359 +1,363 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferretería El Huarangal</title>
-    <!-- Fuente -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Ícono -->
-    <link rel="icon" href="assets/img/logo.ico">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/users.css">
-    <link rel="stylesheet" href="css/products.css">
-    <link rel="stylesheet" href="css/index.css">
-    <!-- Íconos -->
-    <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferretería El Huarangal</title>
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Ícono -->
+  <link rel="icon" href="assets/img/logo.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/users.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/index.css">
+  <!-- Íconos -->
+  <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <a href="index.html" class="header__info">
-            <img src="assets/img/logo.webp" alt="Logo" class="header__logo">
-            <h1 class="header__name">EL HUARANGAL</h1>
-        </a>
-        <form action="#" method="post" class="header__form">
-            <input type="text" class="header__input" placeholder="Buscar en la tienda">
-            <button type="submit" class="header__button">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-        <button id="headerIcon" class="header__icon">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-    </header>
+  <!-- HEADER -->
+  <header class="header">
+    <a href="index.html" class="header__info">
+      <img src="assets/img/logo.webp" alt="Logo" class="header__logo">
+      <h1 class="header__name">EL HUARANGAL</h1>
+    </a>
+    <form action="#" method="post" class="header__form">
+      <input type="text" class="header__input" placeholder="Buscar en la tienda">
+      <button type="submit" class="header__button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+    <button id="headerIcon" class="header__icon">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
 
-    <!-- NAVBAR -->
-    <nav class="nav">
-        <div class="nav__categories categories">
-            <div class="categories__menu">
-                <p class="categories__title"><i class="fa-solid fa-bars"></i>Categorías</p>
-                <i class="fa-solid fa-caret-down"></i>
-            </div>
-            <ul class="categories__list">
-                <li><a href="#" class="categories__link">Herramientas</a></li>
-                <li><a href="#" class="categories__link">Construcción</a></li>
-                <li><a href="#" class="categories__link">Carpintería</a></li>
-                <li><a href="#" class="categories__link">Electricidad</a></li>
-            </ul>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav__categories categories">
+      <div class="categories__menu">
+        <p class="categories__title"><i class="fa-solid fa-bars"></i>Categorías</p>
+        <i class="fa-solid fa-caret-down"></i>
+      </div>
+      <ul class="categories__list">
+        <li><a href="#" class="categories__link">Herramientas</a></li>
+        <li><a href="#" class="categories__link">Construcción</a></li>
+        <li><a href="#" class="categories__link">Carpintería</a></li>
+        <li><a href="#" class="categories__link">Electricidad</a></li>
+      </ul>
+    </div>
+    <ul class="nav__list">
+      <li><a href="#" class="nav__link link--active">Inicio</a></li>
+      <li><a href="#" class="nav__link">Nosotros</a></li>
+      <li><a href="#" class="nav__link">Productos</a></li>
+    </ul>
+    <div class="nav__icons">
+      <div>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <span class="nav__number">1</span>
+      </div>
+      <a href="#"><i class="fa-solid fa-user"></i></a>
+    </div>
+  </nav>
+
+  <!-- RESPONSIVE -->
+  <nav id="responsive" class="responsive">
+    <button id="responsiveIcon" class="responsive__icon">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <form action="#" method="post" class="header__form responsive__form">
+      <input type="text" class="header__input" placeholder="Buscar en la tienda">
+      <button type="submit" class="header__button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+    <div class="nav__icons">
+      <div>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <span class="nav__number">1</span>
+      </div>
+      <a href="#"><i class="fa-solid fa-user"></i></a>
+    </div>
+    <ul class="nav__list">
+      <li><a href="#" class="nav__link link--active">Inicio</a></li>
+      <li><a href="#" class="nav__link">Nosotros</a></li>
+      <li><a href="#" class="nav__link">Productos</a></li>
+      <li class="nav__categories categories">
+        <div class="categories__menu">
+          <p class="categories__title">Categorías</p>
+          <i class="fa-solid fa-caret-down"></i>
         </div>
-        <ul class="nav__list">
-            <li><a href="#" class="nav__link link--active">Inicio</a></li>
-            <li><a href="#" class="nav__link">Nosotros</a></li>
-            <li><a href="#" class="nav__link">Productos</a></li>
+        <ul class="categories__list">
+          <li><a href="#" class="categories__link">Herramientas</a></li>
+          <li><a href="#" class="categories__link">Construcción</a></li>
+          <li><a href="#" class="categories__link">Carpintería</a></li>
+          <li><a href="#" class="categories__link">Electricidad</a></li>
         </ul>
-        <div class="nav__icons">
-            <div>
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                <span class="nav__number">1</span>
-            </div>
-            <a href="#"><i class="fa-solid fa-user"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main">
+    <img src="assets/img/main.webp" alt="" class="main__img">
+    <div class="main__text">
+      <h2 class="main__title">“La solución para tus proyectos, a un solo click”</h2>
+      <p class="main__p">“Productos de alta calidad, resultados impecables”</p>
+    </div>
+  </main>
+
+  <!-- BENEFICIOS -->
+  <section class="benefit-container">
+    <article class="benefit">
+      <img src="assets/img/benefit-1.webp" alt="Beneficio" class="benefit__img">
+      <p class="benefit__p">Atención vía Whatsapp</p>
+    </article>
+    <article class="benefit">
+      <img src="assets/img/benefit-2.webp" alt="Beneficio" class="benefit__img">
+      <p class="benefit__p">Pago virtual</p>
+    </article>
+    <article class="benefit">
+      <img src="assets/img/benefit-3.webp" alt="Beneficio" class="benefit__img">
+      <p class="benefit__p">Retiro en Tienda</p>
+    </article>
+    <article class="benefit">
+      <img src="assets/img/benefit-4.webp" alt="Beneficio" class="benefit__img">
+      <p class="benefit__p">Extenso Catalogo</p>
+    </article>
+    <article class="benefit">
+      <img src="assets/img/benefit-5.webp" alt="Beneficio" class="benefit__img">
+      <p class="benefit__p">Delivery rápido</p>
+    </article>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section class="products">
+    <h2 class="products__title">PRODUCTOS DESTACADOS</h2>
+    <div class="product-container">
+      <article class="product">
+        <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
+        <div class="product__content">
+          <p>Nombre del Producto</p>
+          <p>S/99.99</p>
         </div>
+        <div class="product__icons">
+          <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
+          <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
+        </div>
+      </article>
+      <article class="product">
+        <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
+        <div class="product__content">
+          <p>Nombre del Producto</p>
+          <p>S/99.99</p>
+        </div>
+        <div class="product__icons">
+          <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
+          <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
+        </div>
+      </article>
+      <article class="product">
+        <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
+        <div class="product__content">
+          <p>Nombre del Producto</p>
+          <p>S/99.99</p>
+        </div>
+        <div class="product__icons">
+          <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
+          <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
+        </div>
+      </article>
+      <article class="product">
+        <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
+        <div class="product__content">
+          <p>Nombre del Producto</p>
+          <p>S/99.99</p>
+        </div>
+        <div class="product__icons">
+          <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
+          <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
+        </div>
+      </article>
+      <article class="product">
+        <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
+        <div class="product__content">
+          <p>Nombre del Producto</p>
+          <p>S/99.99</p>
+        </div>
+        <div class="product__icons">
+          <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
+          <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
+        </div>
+      </article>
+      <article class="product">
+        <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
+        <div class="product__content">
+          <p>Nombre del Producto</p>
+          <p>S/99.99</p>
+        </div>
+        <div class="product__icons">
+          <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
+          <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
+        </div>
+      </article>
+      <article class="product">
+        <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
+        <div class="product__content">
+          <p>Nombre del Producto</p>
+          <p>S/99.99</p>
+        </div>
+        <div class="product__icons">
+          <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
+          <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
+        </div>
+      </article>
+      <article class="product">
+        <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
+        <div class="product__content">
+          <p>Nombre del Producto</p>
+          <p>S/99.99</p>
+        </div>
+        <div class="product__icons">
+          <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
+          <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
+        </div>
+      </article>
+      <article class="product">
+        <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
+        <div class="product__content">
+          <p>Nombre del Producto</p>
+          <p>S/99.99</p>
+        </div>
+        <div class="product__icons">
+          <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
+          <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
+        </div>
+      </article>
+      <article class="product">
+        <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
+        <div class="product__content">
+          <p>Nombre del Producto</p>
+          <p>S/99.99</p>
+        </div>
+        <div class="product__icons">
+          <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
+          <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SLIDER -->
+  <section class="slider">
+    <article class="slide-track">
+      <div class="slide">
+        <img src="assets/img/1.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/2.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/3.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/4.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/5.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/6.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/7.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/8.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/9.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/10.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/1.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/2.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/3.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/4.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/5.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/6.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/7.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/8.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/9.webp" alt="">
+      </div>
+      <div class="slide">
+        <img src="assets/img/10.webp" alt="">
+      </div>
+    </article>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__nav footer__company">
+      <img src="assets/img/logo.webp" alt="logo" class="footer__logo">
+      <p><strong>Ferretería El Huarangal</strong></p>
+      <p>RUC: 20603020015</p>
+    </div>
+    <nav class="footer__nav">
+      <h3 class="footer__title">Navegación</h3>
+      <ul class="footer__list">
+        <li><a href="#" class="footer__link">Inicio</a></li>
+        <li><a href="#" class="footer__link">Nosotros</a></li>
+        <li><a href="#" class="footer__link">Productos</a></li>
+      </ul>
     </nav>
-
-    <!-- RESPONSIVE -->
-    <nav id="responsive" class="responsive">
-        <button id="responsiveIcon" class="responsive__icon">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        <form action="#" method="post" class="header__form responsive__form">
-            <input type="text" class="header__input" placeholder="Buscar en la tienda">
-            <button type="submit" class="header__button">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-        <div class="nav__icons">
-            <div>
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                <span class="nav__number">1</span>
-            </div>
-            <a href="#"><i class="fa-solid fa-user"></i></a>
-        </div>
-        <ul class="nav__list">
-            <li><a href="#" class="nav__link">Inicio</a></li>
-            <li><a href="#" class="nav__link">Nosotros</a></li>
-            <li><a href="#" class="nav__link">Productos</a></li>
-            <li class="nav__categories categories">
-                <div class="categories__menu">
-                    <p class="categories__title">Categorías</p>
-                    <i class="fa-solid fa-caret-down"></i>
-                </div>
-                <ul class="categories__list">
-                    <li><a href="#" class="categories__link">Herramientas</a></li>
-                    <li><a href="#" class="categories__link">Construcción</a></li>
-                    <li><a href="#" class="categories__link">Carpintería</a></li>
-                    <li><a href="#" class="categories__link">Electricidad</a></li>
-                </ul>
-            </li>
-        </ul>
+    <nav class="footer__nav">
+      <h3 class="footer__title">Categorías</h3>
+      <ul class="footer__list">
+        <li><a href="#" class="footer__link">Herramientas</a></li>
+        <li><a href="#" class="footer__link">Construcción</a></li>
+        <li><a href="#" class="footer__link">Carpintería</a></li>
+        <li><a href="#" class="footer__link">Electricidad</a></li>
+      </ul>
     </nav>
+    <div class="footer__nav footer__contact">
+      <h3 class="footer__title">Contacto</h3>
+      <ul class="footer__list">
+        <li class="footer__info"><i class="fa-solid fa-phone"></i>941 829 053</li>
+        <li class="footer__info"><i class="fa-solid fa-envelope"></i>elhuarangal@gmail.com</li>
+        <li class="footer__info"><i class="fa-solid fa-location-dot"></i>PJ Alto Selva Alegre Zona C
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <div class="copyright">&copy; El Huarangal 2024. Todos los derechos reservados</div>
+  <a href="https://api.whatsapp.com/send?phone=51978634490" class="whatsapp" target="_blank"><i
+      class="fa-brands fa-whatsapp"></i></a>
 
-    <!-- MAIN -->
-    <main class="main">
-        <img src="assets/img/main.webp" alt="" class="main__img">
-        <div class="main__text">
-            <h2 class="main__title">“La solución para tus proyectos, a un solo click”</h2>
-            <p class="main__p">“Productos de alta calidad, resultados impecables”</p>
-        </div>
-    </main>
-
-    <!-- BENEFICIOS -->
-    <section class="benefit-container">
-        <article class="benefit">
-            <img src="assets/img/benefit-1.webp" alt="Beneficio" class="benefit__img">
-            <p class="benefit__p">Atención vía Whatsapp</p>
-        </article>
-        <article class="benefit">
-            <img src="assets/img/benefit-2.webp" alt="Beneficio" class="benefit__img">
-            <p class="benefit__p">Pago virtual</p>
-        </article>
-        <article class="benefit">
-            <img src="assets/img/benefit-3.webp" alt="Beneficio" class="benefit__img">
-            <p class="benefit__p">Retiro en Tienda</p>
-        </article>
-        <article class="benefit">
-            <img src="assets/img/benefit-4.webp" alt="Beneficio" class="benefit__img">
-            <p class="benefit__p">Extenso Catalogo</p>
-        </article>
-        <article class="benefit">
-            <img src="assets/img/benefit-5.webp" alt="Beneficio" class="benefit__img">
-            <p class="benefit__p">Delivery rápido</p>
-        </article>
-    </section>
-
-    <!-- PRODUCTOS -->
-    <section class="products">
-        <h2 class="products__title">PRODUCTOS DESTACADOS</h2>
-        <div class="product-container">
-            <article class="product">
-                <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-                <div class="product__content">
-                    <p>Nombre del Producto</p>
-                    <p>S/99.99</p>
-                </div>
-                <div class="product__icons">
-                    <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-                </div>
-            </article>
-            <article class="product">
-                <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-                <div class="product__content">
-                    <p>Nombre del Producto</p>
-                    <p>S/99.99</p>
-                </div>
-                <div class="product__icons">
-                    <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-                </div>
-            </article>
-            <article class="product">
-                <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-                <div class="product__content">
-                    <p>Nombre del Producto</p>
-                    <p>S/99.99</p>
-                </div>
-                <div class="product__icons">
-                    <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-                </div>
-            </article>
-            <article class="product">
-                <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-                <div class="product__content">
-                    <p>Nombre del Producto</p>
-                    <p>S/99.99</p>
-                </div>
-                <div class="product__icons">
-                    <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-                </div>
-            </article>
-            <article class="product">
-                <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-                <div class="product__content">
-                    <p>Nombre del Producto</p>
-                    <p>S/99.99</p>
-                </div>
-                <div class="product__icons">
-                    <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-                </div>
-            </article>
-            <article class="product">
-                <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-                <div class="product__content">
-                    <p>Nombre del Producto</p>
-                    <p>S/99.99</p>
-                </div>
-                <div class="product__icons">
-                    <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-                </div>
-            </article>
-            <article class="product">
-                <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-                <div class="product__content">
-                    <p>Nombre del Producto</p>
-                    <p>S/99.99</p>
-                </div>
-                <div class="product__icons">
-                    <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-                </div>
-            </article>
-            <article class="product">
-                <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-                <div class="product__content">
-                    <p>Nombre del Producto</p>
-                    <p>S/99.99</p>
-                </div>
-                <div class="product__icons">
-                    <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-                </div>
-            </article>
-            <article class="product">
-                <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-                <div class="product__content">
-                    <p>Nombre del Producto</p>
-                    <p>S/99.99</p>
-                </div>
-                <div class="product__icons">
-                    <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-                </div>
-            </article>
-            <article class="product">
-                <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-                <div class="product__content">
-                    <p>Nombre del Producto</p>
-                    <p>S/99.99</p>
-                </div>
-                <div class="product__icons">
-                    <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- SLIDER -->
-    <section class="slider">
-        <article class="slide-track">
-            <div class="slide">
-                <img src="assets/img/1.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/2.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/3.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/4.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/5.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/6.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/7.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/8.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/9.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/10.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/1.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/2.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/3.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/4.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/5.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/6.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/7.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/8.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/9.webp" alt="">
-            </div>
-            <div class="slide">
-                <img src="assets/img/10.webp" alt="">
-            </div>
-        </article>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer__nav footer__company">
-            <img src="assets/img/logo.webp" alt="logo" class="footer__logo">
-            <p><strong>Ferretería El Huarangal</strong></p>
-            <p>RUC: 20603020015</p>
-        </div>
-        <nav class="footer__nav">
-            <h3 class="footer__title">Navegación</h3>
-            <ul class="footer__list">
-                <li><a href="#" class="footer__link">Inicio</a></li>
-                <li><a href="#" class="footer__link">Nosotros</a></li>
-                <li><a href="#" class="footer__link">Productos</a></li>
-            </ul>
-        </nav>
-        <nav class="footer__nav">
-            <h3 class="footer__title">Categorías</h3>
-            <ul class="footer__list">
-                <li><a href="#" class="footer__link">Herramientas</a></li>
-                <li><a href="#" class="footer__link">Construcción</a></li>
-                <li><a href="#" class="footer__link">Carpintería</a></li>
-                <li><a href="#" class="footer__link">Electricidad</a></li>
-            </ul>
-        </nav>
-        <div class="footer__nav footer__contact">
-            <h3 class="footer__title">Contacto</h3>
-            <ul class="footer__list">
-                <li class="footer__info"><i class="fa-solid fa-phone"></i>941 829 053</li>
-                <li class="footer__info"><i class="fa-solid fa-envelope"></i>elhuarangal@gmail.com</li>
-                <li class="footer__info"><i class="fa-solid fa-location-dot"></i>PJ Alto Selva Alegre Zona C
-                </li>
-            </ul>
-        </div>
-    </footer>
-    <div class="copyright">&copy; El Huarangal 2024. Todos los derechos reservados</div>
-    <a href="https://api.whatsapp.com/send?phone=51978634490" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-
-    <script src="js/users.js"></script>
+  <script src="js/users.js"></script>
 </body>
+
 </html>

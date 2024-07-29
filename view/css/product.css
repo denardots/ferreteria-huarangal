@@ -1,0 +1,104 @@
+/* ESTILOS DE PRODUCTO */
+.product {
+  display: flex;
+  min-height: 50vh;
+  margin: 5vh 20vw;
+  box-shadow: 0 0 5px 5px var(--product-shadow);
+}
+.product__img {
+  height: 50vh;
+  width: 50%;
+  object-fit: contain;
+}
+.product__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  padding: 50px;
+}
+.product__title {
+  font-size: 40px;
+}
+.product__price {
+  font-weight: 700;
+  font-size: 30px;
+  color: #e6b609;
+}
+.product__actions {
+  font-size: 20px;
+}
+.product__icon {
+  padding: 7px 10px;
+  background-color: var(--nav-link-hover);
+  border: 3px solid var(--nav-link);
+}
+.product__quantity {
+  margin: 0 9px;
+}
+.product__button {
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: var(--nav-link-hover);
+  border: 3px solid #f3f2f2;
+}
+
+/* EFECTOS DE PRODUCTO */
+.product__icon:hover, .product__button:hover {
+  background-color: #e6b609;
+}
+.product__icon:active, .product__button:active {
+  background-color: #dbac03;
+}
+
+/* ESTILOS EN LAPTOP S */
+@media (width <= 1024px) {
+  .product {
+    margin: 5vh 10vw;
+  }
+  .product__content {
+    padding: 25px;
+  }
+  .product__title {
+    font-size: 35px;
+  }
+  .product__price {
+    font-size: 25px;
+  }
+}
+
+/* ESTILOS EN TABLET */
+@media (width <= 768px) {
+  .product {
+    margin: 5vh 5vw;
+  }
+  .product__title {
+    font-size: 30px;
+  }
+  .product__price {
+    font-size: 20px;
+  }
+  .product__actions {
+    font-size: 18px;
+  }
+}
+
+/* ESTILOS EN CELULAR L */
+@media (width <= 425px) {
+  .product {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .product__img, .product__content {
+    width: 100%;
+  }
+  .product__content {
+    gap: 20px;
+  }
+  .product__title {
+    font-size: 25px;
+  }
+  .product__price {
+    font-size: 18px;
+  }
+}
