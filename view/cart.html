@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Producto</title>
+  <title>Carrito de Compras</title>
   <!-- Fuente -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/users.css">
-  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/cart.css">
   <!-- Íconos -->
   <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
 </head>
@@ -94,21 +94,32 @@
     </ul>
   </nav>
 
-  <!-- PRODUCTOS -->
-  <section class="product">
-    <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-    <article class="product__content">
-      <h2 class="product__title">Nombre del Producto</h2>
-      <h3 class="product__price">S/99.99</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi libero mollitia atque maxime. Ad a commodi, odit consequatur totam quam necessitatibus placeat dignissimos nulla impedit, voluptate vel expedita ratione quia?</p>
-      <div class="product__actions">
-        <button class="product__icon"><i class="fa-solid fa-minus"></i></button>
-        <span class="product__quantity">1</span>
-        <button class="product__icon"><i class="fa-solid fa-plus"></i></button>
+  <!-- CARRITO -->
+  <div class="cart-container">
+    <h2 class="cart__title">Carrito de compras</h2>
+    <section class="cart">
+      <article class="cart__product">
+        <img src="assets/img/products/product.webp" alt="Producto" class="cart__img">
+        <p class="cart__name">Nombre del Producto</p>
+        <p class="cart__quantity">
+          <button class="cart__icon"><i class="fa-solid fa-minus"></i></button>
+          <span class="cart__number">1</span>
+          <button class="cart__icon"><i class="fa-solid fa-plus"></i></button>
+        </p>
+        <p class="cart__subtotal">S/999.99</p>
+        <p class="cart__delete"><i class="fa-solid fa-trash"></i></p>
+      </article>
+      <div class="cart__actions">
+        <div class="cart__buy">
+          <a href="https://api.whatsapp.com/send?phone=51978634490" class="cart__whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Continuar por Whatsapp</span>
+          </a>
+        </div>
+        <div class="cart__total"><span class="cart__word">Total: </span>S/9999.99</div>
       </div>
-      <button class="product__button">Agregar al Carrito</button>
-    </article>
-  </section>
+    </section>
+  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
