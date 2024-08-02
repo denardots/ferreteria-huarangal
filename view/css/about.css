@@ -1,0 +1,82 @@
+/* ESTILOS DE NOSOTROS */
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding: 5vh 10vw;
+}
+.about__img, .about__content {
+  width: 47%;
+  height: 45vh;
+}
+.about__img {
+  background-image: url(../assets/img/enterprise.webp);
+  background-position: 0 100px center;
+  background-size: cover;
+}
+.about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3vh 0;
+  font-size: 18px;
+}
+.about__title {
+  font-size: 40px;
+} 
+.values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 30vh;
+  padding: 0 10vw;
+}
+.values__card {
+  width: 47%;
+  padding: 25px;
+}
+.values__title {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.values__card--first {
+  background-color: var(--nav-link-hover);
+}
+.values__card--second {
+  background-color: var(--header);
+  color: var(--nav-link);
+}
+
+/* ESTILOS EN LAPTOP S */
+@media (width <= 1024px) {
+  .about__content {
+    padding: 0;
+    font-size: 16px;
+  }
+  .about__title {
+    font-size: 35px;
+  } 
+}
+
+/* ESTILOS EN TABLET */
+@media (width <= 768px) {
+  .about__img, .about__content, .values__card {
+    width: 48%;
+  }
+  .about__title {
+    font-size: 25px;
+  }
+  .values__card p{
+    font-size: 14px;
+  }
+}
+
+/* ESTILOS EN CELULAR L */
+@media (width <= 425px) {
+  .about, .values {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about__img, .about__content, .values__card {
+    width: 100%;
+  }
+}

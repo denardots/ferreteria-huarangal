@@ -21,8 +21,7 @@ li {
 }
 
 /* ESTILOS DE HEADER */
-.header,
-.header__info {
+.header, .header__info {
   display: flex;
   align-items: center;
 }
@@ -51,8 +50,7 @@ li {
   font-size: 15px;
   outline: none;
 }
-.header__button,
-.header__icon {
+.header__button, .header__icon {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -74,8 +72,7 @@ li {
 }
 
 /* ESTILOS DE NAVBAR */
-.nav,
-.categories__menu {
+.nav, .categories__menu {
   display: flex;
   justify-content: space-between;
 }
@@ -123,8 +120,7 @@ li {
   color: var(--nav);
   border-bottom: 1px solid var(--categorie-active);
 }
-.nav__list,
-.nav__icons {
+.nav__list, .nav__icons {
   display: flex;
   align-items: center;
 }
@@ -136,8 +132,7 @@ li {
 .nav__link {
   color: var(--nav-link);
 }
-.link--active,
-.nav__icons i {
+.link--active, .nav__icons i {
   color: var(--nav-link-hover);
 }
 .nav__icons {
@@ -154,13 +149,11 @@ li {
   /* Tiempo de transición de salida de dropdown */
   transition-duration: 1.5s;
 }
-.categories__link:hover,
-.footer__link:hover {
+.categories__link:hover, .footer__link:hover {
   font-weight: 500;
   color: #666;
 }
-.categories__link:active,
-.footer__link:active {
+.categories__link:active, .footer__link:active {
   color: var(--categorie-active);
 }
 .nav__link:hover {
@@ -268,8 +261,7 @@ li {
 
 /* ESTILOS EN TABLET */
 @media (width <= 768px) {
-  .header,
-  .nav {
+  .header, .nav {
     padding: 0 8vw;
   }
   .nav__categories {
@@ -310,8 +302,7 @@ li {
   .header__name {
     font-size: 28px;
   }
-  .header__form,
-  .nav {
+  .header__form, .nav {
     display: none;
   }
   .header__input {
@@ -362,8 +353,7 @@ li {
   .footer {
     gap: 30px;
   }
-  .footer__company,
-  .footer__nav {
+  .footer__company, .footer__nav {
     width: 100%;
   }
 }

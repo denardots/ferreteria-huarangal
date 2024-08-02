@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
+    <title>Nosotros</title>
     <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,12 +13,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/users.css">
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/about.css">
     <!-- Íconos -->
     <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
   </head>
   <body>
-      <!-- HEADER -->
+    <!-- HEADER -->
     <header class="header">
       <a href="index.html" class="header__info">
         <img src="assets/img/logo.webp" alt="Logo" class="header__logo">
@@ -26,10 +26,11 @@
       </a>
       <form action="#" method="post" class="header__form">
         <input type="text" class="header__input" placeholder="Buscar en la tienda">
-        <button type="submit" class="header__button"><i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        <button type="submit" class="header__button"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
-      <button id="headerIcon" class="header__icon"><i class="fa-solid fa-bars"></i></button>
+      <button id="headerIcon" class="header__icon">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </header>
 
     <!-- NAVBAR -->
@@ -48,8 +49,8 @@
       </div>
       <ul class="nav__list">
         <li><a href="#" class="nav__link">Inicio</a></li>
-        <li><a href="#" class="nav__link">Nosotros</a></li>
-        <li><a href="#" class="nav__link link--active">Productos</a></li>
+        <li><a href="#" class="nav__link link--active">Nosotros</a></li>
+        <li><a href="#" class="nav__link">Productos</a></li>
       </ul>
       <div class="nav__icons">
         <div>
@@ -62,8 +63,7 @@
 
     <!-- RESPONSIVE -->
     <nav id="responsive" class="responsive">
-      <button id="responsiveIcon" class="responsive__icon"><i class="fa-solid fa-xmark"></i>
-      </button>
+      <button id="responsiveIcon" class="responsive__icon"></button><i class="fa-solid fa-xmark"></i></button>
       <form action="#" method="post" class="header__form responsive__form">
         <input type="text" class="header__input" placeholder="Buscar en la tienda">
         <button type="submit" class="header__button"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -77,12 +77,12 @@
       </div>
       <ul class="nav__list">
         <li><a href="#" class="nav__link">Inicio</a></li>
-        <li><a href="#" class="nav__link">Nosotros</a></li>
-        <li><a href="#" class="nav__link link--active">Productos</a></li>
+        <li><a href="#" class="nav__link link--active">Nosotros</a></li>
+        <li><a href="#" class="nav__link">Productos</a></li>
         <li class="nav__categories categories">
           <div class="categories__menu">
-            <p class="categories__title">Categorías</p>
-            <i class="fa-solid fa-caret-down"></i>
+              <p class="categories__title">Categorías</p>
+              <i class="fa-solid fa-caret-down"></i>
           </div>
           <ul class="categories__list">
             <li><a href="#" class="categories__link">Herramientas</a></li>
@@ -94,55 +94,56 @@
       </ul>
     </nav>
 
-    <!-- CARRITO -->
-    <div class="cart-container">
-      <h2 class="cart__title">Carrito de compras</h2>
-      <section class="cart">
-        <article class="cart__product">
-          <img src="assets/img/products/product.webp" alt="Producto" class="cart__img">
-          <p class="cart__name">Nombre del Producto</p>
-          <p class="cart__quantity">
-            <button class="cart__icon"><i class="fa-solid fa-minus"></i></button>
-            <span class="cart__number">1</span>
-            <button class="cart__icon"><i class="fa-solid fa-plus"></i></button>
-          </p>
-          <p class="cart__subtotal">S/999.99</p>
-          <p class="cart__delete"><i class="fa-solid fa-trash"></i></p>
-        </article>
-        <div class="cart__actions">
-          <div class="cart__buy">
-            <a href="https://api.whatsapp.com/send?phone=51978634490" class="cart__whatsapp" target="_blank">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>Continuar por Whatsapp</span>
-            </a>
-          </div>
-          <div class="cart__total"><span class="cart__word">Total: </span>S/9999.99</div>
-        </div>
-      </section>
-    </div>
+    <!-- NOSOTROS -->
+    <section class="about">
+      <div class="about__img"></div>
+      <article class="about__content">
+        <h2 class="about__title">Sobre Nosotros</h2>
+        <p>Somos una empresa Arequipeña con más de 20 años de experiencia en la comercialización de una amplia gama de productos para brindar soluciones integrales en abastecimiento de suministros ferreteros.</p>
+        <p>En nuestra tienda encontrarás una amplia variedad de productos para satisfacer tus necesidades de construcción, reparación y mantenimiento de tu hogar o negocio.</p>
+        <p>Tenemos el compromiso  de preservar el medio ambiente y aportar al crecimiento del país mediante una búsqueda constante de nuevos mercados para tener una trayectoria de éxito y ofrecer  mayores beneficios a nuestros colaboradores.</p>
+      </article>
+    </section>
+
+    <!-- VALORES -->
+    <section class="values">
+      <article class="values__card values__card--first">
+        <h3 class="values__title">Misión</h3>
+        <p>Entregarles a nuestros clientes una amplia gama de productos que necesitan para poder realizar sus actividades y proyectos de una manera eficiente y segura mediante Equipos de alta calidad.</p>
+      </article>
+      <article class="values__card values__card--second">
+        <h3 class="values__title">Visión</h3>
+        <p>Nos proyectamos como una empresa conocida en el rubro ferretero, así como también brindar a nuestros clientes una gran cobertura de distribución, lo que nos permite brindar un servicio de calidad.</p>
+      </article>
+    </section>
+
+    <!-- CONTACTO -->
+     <section class="about">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.3300067280966!2d-71.51778152396639!3d-16.357143184364862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x914249b8ff3c6fe7%3A0x34329fd51be6528d!2sFerreter%C3%ADa%20El%20Huarangal!5e0!3m2!1ses-419!2spe!4v1722567399061!5m2!1ses-419!2spe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__nav footer__company">
-          <img src="assets/img/logo.webp" alt="logo" class="footer__logo">
-          <p><strong>Ferretería El Huarangal</strong></p>
-          <p>RUC: 20603020015</p>
+        <img src="assets/img/logo.webp" alt="logo" class="footer__logo">
+        <p><strong>Ferretería El Huarangal</strong></p>
+        <p>RUC: 20603020015</p>
       </div>
       <nav class="footer__nav">
         <h3 class="footer__title">Navegación</h3>
         <ul class="footer__list">
-          <li><a href="#" class="footer__link">Inicio</a></li>
-          <li><a href="#" class="footer__link">Nosotros</a></li>
-          <li><a href="#" class="footer__link">Productos</a></li>
+            <li><a href="#" class="footer__link">Inicio</a></li>
+            <li><a href="#" class="footer__link">Nosotros</a></li>
+            <li><a href="#" class="footer__link">Productos</a></li>
         </ul>
       </nav>
       <nav class="footer__nav">
         <h3 class="footer__title">Categorías</h3>
         <ul class="footer__list">
-          <li><a href="#" class="footer__link">Herramientas</a></li>
-          <li><a href="#" class="footer__link">Construcción</a></li>
-          <li><a href="#" class="footer__link">Carpintería</a></li>
-          <li><a href="#" class="footer__link">Electricidad</a></li>
+            <li><a href="#" class="footer__link">Herramientas</a></li>
+            <li><a href="#" class="footer__link">Construcción</a></li>
+            <li><a href="#" class="footer__link">Carpintería</a></li>
+            <li><a href="#" class="footer__link">Electricidad</a></li>
         </ul>
       </nav>
       <div class="footer__nav footer__contact">
@@ -150,7 +151,8 @@
         <ul class="footer__list">
           <li class="footer__info"><i class="fa-solid fa-phone"></i>941 829 053</li>
           <li class="footer__info"><i class="fa-solid fa-envelope"></i>elhuarangal@gmail.com</li>
-          <li class="footer__info"><i class="fa-solid fa-location-dot"></i>PJ Alto Selva Alegre Zona C</li>
+          <li class="footer__info"><i class="fa-solid fa-location-dot"></i>PJ Alto Selva Alegre Zona C
+          </li>
         </ul>
       </div>
     </footer>

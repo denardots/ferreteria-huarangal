@@ -1,87 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Producto</title>
-  <!-- Fuente -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Ícono -->
-  <link rel="icon" href="assets/img/logo.ico">
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/users.css">
-  <link rel="stylesheet" href="css/product.css">
-  <!-- Íconos -->
-  <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- HEADER -->
-  <header class="header">
-    <a href="index.html" class="header__info">
-      <img src="assets/img/logo.webp" alt="Logo" class="header__logo">
-      <h1 class="header__name">EL HUARANGAL</h1>
-    </a>
-    <form action="#" method="post" class="header__form">
-      <input type="text" class="header__input" placeholder="Buscar en la tienda">
-      <button type="submit" class="header__button"><i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </form>
-    <button id="headerIcon" class="header__icon"><i class="fa-solid fa-bars"></i></button>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Ícono -->
+    <link rel="icon" href="assets/img/logo.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/users.css">
+    <link rel="stylesheet" href="css/product.css">
+    <!-- Íconos -->
+    <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+      <!-- HEADER -->
+    <header class="header">
+      <a href="index.html" class="header__info">
+        <img src="assets/img/logo.webp" alt="Logo" class="header__logo">
+        <h1 class="header__name">EL HUARANGAL</h1>
+      </a>
+      <form action="#" method="post" class="header__form">
+        <input type="text" class="header__input" placeholder="Buscar en la tienda">
+        <button type="submit" class="header__button"><i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <button id="headerIcon" class="header__icon"><i class="fa-solid fa-bars"></i></button>
+    </header>
 
-  <!-- NAVBAR -->
-  <nav class="nav">
-    <div class="nav__categories categories">
-      <div class="categories__menu">
-        <p class="categories__title"><i class="fa-solid fa-bars"></i>Categorías</p>
-        <i class="fa-solid fa-caret-down"></i>
-      </div>
-      <ul class="categories__list">
-        <li><a href="#" class="categories__link">Herramientas</a></li>
-        <li><a href="#" class="categories__link">Construcción</a></li>
-        <li><a href="#" class="categories__link">Carpintería</a></li>
-        <li><a href="#" class="categories__link">Electricidad</a></li>
-      </ul>
-    </div>
-    <ul class="nav__list">
-      <li><a href="#" class="nav__link">Inicio</a></li>
-      <li><a href="#" class="nav__link">Nosotros</a></li>
-      <li><a href="#" class="nav__link link--active">Productos</a></li>
-    </ul>
-    <div class="nav__icons">
-      <div>
-          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-          <span class="nav__number">1</span>
-      </div>
-      <a href="#"><i class="fa-solid fa-user"></i></a>
-    </div>
-  </nav>
-
-  <!-- RESPONSIVE -->
-  <nav id="responsive" class="responsive">
-    <button id="responsiveIcon" class="responsive__icon"><i class="fa-solid fa-xmark"></i>
-    </button>
-    <form action="#" method="post" class="header__form responsive__form">
-      <input type="text" class="header__input" placeholder="Buscar en la tienda">
-      <button type="submit" class="header__button"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
-    <div class="nav__icons">
-      <div>
-          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-          <span class="nav__number">1</span>
-      </div>
-      <a href="#"><i class="fa-solid fa-user"></i></a>
-    </div>
-    <ul class="nav__list">
-      <li><a href="#" class="nav__link">Inicio</a></li>
-      <li><a href="#" class="nav__link">Nosotros</a></li>
-      <li><a href="#" class="nav__link link--active">Productos</a></li>
-      <li class="nav__categories categories">
+    <!-- NAVBAR -->
+    <nav class="nav">
+      <div class="nav__categories categories">
         <div class="categories__menu">
-          <p class="categories__title">Categorías</p>
+          <p class="categories__title"><i class="fa-solid fa-bars"></i>Categorías</p>
           <i class="fa-solid fa-caret-down"></i>
         </div>
         <ul class="categories__list">
@@ -90,62 +45,107 @@
           <li><a href="#" class="categories__link">Carpintería</a></li>
           <li><a href="#" class="categories__link">Electricidad</a></li>
         </ul>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- PRODUCTOS -->
-  <section class="product">
-    <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-    <article class="product__content">
-      <h2 class="product__title">Nombre del Producto</h2>
-      <h3 class="product__price">S/99.99</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi libero mollitia atque maxime. Ad a commodi, odit consequatur totam quam necessitatibus placeat dignissimos nulla impedit, voluptate vel expedita ratione quia?</p>
-      <div class="product__actions">
-        <button class="product__icon"><i class="fa-solid fa-minus"></i></button>
-        <span class="product__quantity">1</span>
-        <button class="product__icon"><i class="fa-solid fa-plus"></i></button>
       </div>
-      <button class="product__button">Agregar al Carrito</button>
-    </article>
-  </section>
+      <ul class="nav__list">
+        <li><a href="#" class="nav__link">Inicio</a></li>
+        <li><a href="#" class="nav__link">Nosotros</a></li>
+        <li><a href="#" class="nav__link link--active">Productos</a></li>
+      </ul>
+      <div class="nav__icons">
+        <div>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <span class="nav__number">1</span>
+        </div>
+        <a href="#"><i class="fa-solid fa-user"></i></a>
+      </div>
+    </nav>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__nav footer__company">
-        <img src="assets/img/logo.webp" alt="logo" class="footer__logo">
-        <p><strong>Ferretería El Huarangal</strong></p>
-        <p>RUC: 20603020015</p>
-    </div>
-    <nav class="footer__nav">
-      <h3 class="footer__title">Navegación</h3>
-      <ul class="footer__list">
-        <li><a href="#" class="footer__link">Inicio</a></li>
-        <li><a href="#" class="footer__link">Nosotros</a></li>
-        <li><a href="#" class="footer__link">Productos</a></li>
+    <!-- RESPONSIVE -->
+    <nav id="responsive" class="responsive">
+      <button id="responsiveIcon" class="responsive__icon"><i class="fa-solid fa-xmark"></i>
+      </button>
+      <form action="#" method="post" class="header__form responsive__form">
+        <input type="text" class="header__input" placeholder="Buscar en la tienda">
+        <button type="submit" class="header__button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <div class="nav__icons">
+        <div>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <span class="nav__number">1</span>
+        </div>
+        <a href="#"><i class="fa-solid fa-user"></i></a>
+      </div>
+      <ul class="nav__list">
+        <li><a href="#" class="nav__link">Inicio</a></li>
+        <li><a href="#" class="nav__link">Nosotros</a></li>
+        <li><a href="#" class="nav__link link--active">Productos</a></li>
+        <li class="nav__categories categories">
+          <div class="categories__menu">
+            <p class="categories__title">Categorías</p>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+          <ul class="categories__list">
+            <li><a href="#" class="categories__link">Herramientas</a></li>
+            <li><a href="#" class="categories__link">Construcción</a></li>
+            <li><a href="#" class="categories__link">Carpintería</a></li>
+            <li><a href="#" class="categories__link">Electricidad</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
-    <nav class="footer__nav">
-      <h3 class="footer__title">Categorías</h3>
-      <ul class="footer__list">
-        <li><a href="#" class="footer__link">Herramientas</a></li>
-        <li><a href="#" class="footer__link">Construcción</a></li>
-        <li><a href="#" class="footer__link">Carpintería</a></li>
-        <li><a href="#" class="footer__link">Electricidad</a></li>
-      </ul>
-    </nav>
-    <div class="footer__nav footer__contact">
-      <h3 class="footer__title">Contacto</h3>
-      <ul class="footer__list">
-        <li class="footer__info"><i class="fa-solid fa-phone"></i>941 829 053</li>
-        <li class="footer__info"><i class="fa-solid fa-envelope"></i>elhuarangal@gmail.com</li>
-        <li class="footer__info"><i class="fa-solid fa-location-dot"></i>PJ Alto Selva Alegre Zona C</li>
-      </ul>
-    </div>
-  </footer>
-  <div class="copyright">&copy; El Huarangal 2024. Todos los derechos reservados</div>
-  <a href="https://api.whatsapp.com/send?phone=51978634490" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 
-  <script src="js/users.js"></script>
-</body>
+    <!-- PRODUCTOS -->
+    <section class="product">
+      <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
+      <article class="product__content">
+        <h2 class="product__title">Nombre del Producto</h2>
+        <h3 class="product__price">S/99.99</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi libero mollitia atque maxime. Ad a commodi, odit consequatur totam quam necessitatibus placeat dignissimos nulla impedit, voluptate vel expedita ratione quia?</p>
+        <div class="product__actions">
+          <button class="product__icon"><i class="fa-solid fa-minus"></i></button>
+          <span class="product__quantity">1</span>
+          <button class="product__icon"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <button class="product__button">Agregar al Carrito</button>
+      </article>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__nav footer__company">
+          <img src="assets/img/logo.webp" alt="logo" class="footer__logo">
+          <p><strong>Ferretería El Huarangal</strong></p>
+          <p>RUC: 20603020015</p>
+      </div>
+      <nav class="footer__nav">
+        <h3 class="footer__title">Navegación</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Inicio</a></li>
+          <li><a href="#" class="footer__link">Nosotros</a></li>
+          <li><a href="#" class="footer__link">Productos</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__nav">
+        <h3 class="footer__title">Categorías</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Herramientas</a></li>
+          <li><a href="#" class="footer__link">Construcción</a></li>
+          <li><a href="#" class="footer__link">Carpintería</a></li>
+          <li><a href="#" class="footer__link">Electricidad</a></li>
+        </ul>
+      </nav>
+      <div class="footer__nav footer__contact">
+        <h3 class="footer__title">Contacto</h3>
+        <ul class="footer__list">
+          <li class="footer__info"><i class="fa-solid fa-phone"></i>941 829 053</li>
+          <li class="footer__info"><i class="fa-solid fa-envelope"></i>elhuarangal@gmail.com</li>
+          <li class="footer__info"><i class="fa-solid fa-location-dot"></i>PJ Alto Selva Alegre Zona C</li>
+        </ul>
+      </div>
+    </footer>
+
+    <div class="copyright">&copy; El Huarangal 2024. Todos los derechos reservados</div>
+    <a href="https://api.whatsapp.com/send?phone=51978634490" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    <script src="js/users.js"></script>
+  </body>
 </html>
