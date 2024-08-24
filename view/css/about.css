@@ -48,6 +48,9 @@
 
 /* ESTILOS EN LAPTOP S */
 @media (width <= 1024px) {
+  .about {
+    padding: 5vh 5vw;
+  }
   .about__content {
     padding: 0;
     font-size: 16px;
@@ -71,12 +74,17 @@
 }
 
 /* ESTILOS EN CELULAR L */
-@media (width <= 425px) {
+@media (width <= 650px) {
   .about, .values {
     flex-direction: column;
     gap: 20px;
   }
   .about__img, .about__content, .values__card {
     width: 100%;
+  }
+  .about__content {
+    justify-content: flex-start;
+    gap: 20px;
+    height: fit-content;
   }
 }

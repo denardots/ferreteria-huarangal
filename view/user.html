@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Trabajador</title>
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Ícono -->
+    <link rel="icon" href="assets/img/logo.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="css/user.css">
+    <!-- Íconos -->
+    <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- BOTÓN RESPONSIVE -->
+    <div class="menu" id="menu">
+      <i class="fa-solid fa-bars"></i>
+      <i class="fa-solid fa-x"></i>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="aside" id="aside">
+      <div>
+        <div class="aside__title">
+          <img src="assets/img/logo.webp" alt="Logo" id="logo" class="aside__logo">
+          <span>EL HUARANGAL</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li class="nav__list">
+            <a  href="#" class=" nav__link link--active">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Buscar</span>
+            </a>
+          </li>
+          <li class="nav__list">
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-calendar-week"></i>
+              <span>Venta Actual</span>
+            </a>
+          </li>
+          <li class="nav__list">
+            <a href="#" class="nav__link">
+              <i class="fa-regular fa-square-check"></i>
+              <span>Pedidos</span>
+            </a>
+          </li>
+          <li class="nav__list">
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <span>Salir</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <p class="aside__usuario usuario">
+          <i class="fa-solid fa-user"></i>
+          <span class="usuario__nombre">Trabajador</span>
+        </p>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="main" id="main">
+      <section class="main__form form">
+        <h1 class="form__title">Customer's Orders</h1>
+        <div class="form__group">
+          <input class="form__input" type="search" placeholder="Search Data...">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </section>
+      <section class="table-container">
+        <table class="table">
+          <thead class="thead">
+            <tr>
+              <th>Id</th>
+              <th>Customer</th>
+              <th>Location</th>
+              <th>Order Date</th>
+              <th>Status</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody id="tbody" class="tbody">
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="js/panel.js"></script>
+    <script src="js/user.js"></script>
+  </body>
+</html>

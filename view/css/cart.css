@@ -98,7 +98,7 @@
 }
 
 /* ESTILOS EN CELULAR L */
-@media (width <= 425px) {
+@media (width <= 625px) {
   .cart__product {
     flex-direction: column;
     gap: 20px;

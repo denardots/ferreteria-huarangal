@@ -150,12 +150,13 @@
 }
 
 /* ESTILOS EN CELULAR L */
-@media (width <= 425px) {
+@media (width <= 550px) {
   .main__img {
     display: none;
   }
   .main__text {
-    width: 100%;
+    width: 90%;
+    margin: auto;
     text-align: center;
   }
 }

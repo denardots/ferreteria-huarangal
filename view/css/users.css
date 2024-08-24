@@ -260,7 +260,7 @@ li {
 }
 
 /* ESTILOS EN TABLET */
-@media (width <= 768px) {
+@media (width <= 936px) {
   .header, .nav {
     padding: 0 8vw;
   }
@@ -289,7 +289,7 @@ li {
 }
 
 /* ESTILOS EN CELULAR L */
-@media (width <= 425px) {
+@media (width <= 630px) {
   .header {
     padding: 0 5vw;
   }

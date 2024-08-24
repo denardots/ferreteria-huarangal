@@ -52,7 +52,7 @@
 }
 
 /* ESTILOS EN LAPTOP S */
-@media (width <= 1024px) {
+@media (width <= 1200px) {
   .product {
     margin: 5vh 10vw;
   }
@@ -84,7 +84,7 @@
 }
 
 /* ESTILOS EN CELULAR L */
-@media (width <= 425px) {
+@media (width <= 500px) {
   .product {
     flex-direction: column;
     justify-content: center;

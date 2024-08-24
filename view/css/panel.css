@@ -1,0 +1,157 @@
+:root{
+  --color-aside:#fff;
+  --color-texto:#000;
+  --color-menu-hover:#eee;
+}
+
+/* ESTILOS GENERALES */
+*{
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  height: 100vh;
+  width: 100%;
+  background-color: #dfdddd;
+}
+
+/* ESTILOS DE MENÚ */
+.menu, .aside {
+  position: fixed;
+  z-index: 1;
+}
+.menu{
+  top: 15px;
+  right: 15px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+  border-radius: 50%;
+  background-color: var(--color-texto);
+  color: var(--color-aside);
+  cursor: pointer;
+}
+
+/* ESTILOS DE ASIDE */
+.aside{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px 15px;
+  background-color: var(--color-aside);
+  transition: width 0.5s ease,background-color 0.3s ease,left 0.5s ease;
+}
+.aside__title{
+  width: 100%;
+  height: 45px;
+  color: var(--color-texto);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+.aside__logo{
+  margin-left: 5px;
+  width: 40px;
+  cursor: pointer;
+}
+.aside__title span{
+  margin-left: 5px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.aside span{
+  width: 100px;
+  white-space: nowrap;
+  font-size: 18px;
+  text-align: left;
+  opacity: 1;
+  transition: opacity 0.5s ease,width 0.5s ease;
+}
+.nav{
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.nav__list{  
+  list-style: none;
+  display: flex;
+  margin-bottom: 5px;
+}
+.nav__link{
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+  color: #868890;
+}
+.nav i{
+  margin-left: 15px;
+  min-width: 50px;
+  font-size: 20px;
+}
+.link--active{
+  background-color: var(--color-menu-hover);
+  color: var(--color-texto);
+}
+.aside__usuario{
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+}
+.usuario i{
+  margin: 0 15px;
+}
+.usuario__nombre{
+  font-weight: 700;
+}
+
+/* EFECTOS DE ASIDE */
+.nav__link:hover{
+  background-color: var(--color-menu-hover);
+  color: var(--color-texto);
+}
+
+/* CLASES DESDE JAVASCRIPT */
+.min-aside{
+  width: 80px;
+}
+.aside .oculto{
+  opacity: 0;
+  width: 0;
+}
+
+/* CONTENIDO */
+main{
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.5s ease;
+}
+.min-main{
+  margin-left: 80px;
+}
+
+/* ESTILOS EN TABLET */
+@media (width <= 600px){
+  .aside{
+    left: -250px;
+  }
+  .max-aside{
+    left: 0;
+  }
+  .menu{
+    display: flex;
+  }
+  .menu i:nth-child(2){
+    display: none;
+  }
+  main, .min-main{
+    margin-left: 0;
+  }
+}
