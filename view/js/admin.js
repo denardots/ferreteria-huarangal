@@ -1,3 +1,5 @@
+"use strict";
+
 // Función que permite cargar los datos desde el servidor
 const chargeData = async () => {
   let url = "js/data.json";

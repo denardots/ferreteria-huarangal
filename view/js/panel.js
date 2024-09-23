@@ -1,3 +1,5 @@
+"use strict";
+
 const logo = document.getElementById("logo");
 const aside = document.getElementById("aside");
 const spans = document.querySelectorAll("span");
