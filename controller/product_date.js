@@ -1,16 +1,16 @@
 "use strict";
 
-// Función que recibe las categorías de productos
-const loadProduct = async () => {
-  let url = "../model/load_product.php";
+// Función que recibe los productos
+const loadProducts = async () => {
+  let url = "../model/load_products.php";
   const response = await fetch(url);
   const data = await response.json();
-  // Llamamos a una función y le enviamos la data para mostrar las categorias
-  viewProduct(data);
+  // Llamamos a una función y le enviamos la data para mostrar los productos
+  viewProducts(data);
 };
 
-// Función que recibe las categorías de productos y las muestra en el formulario
-const viewProduct = data => {
+// Función que recibe los productos y los muestra en la tabla
+const viewProducts = data => {
   data.forEach(product => {
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -26,4 +26,4 @@ const viewProduct = data => {
 const tbody = document.getElementById("tbody");
 
 // Llamamos a la función que recibirá los productos del servidor
-loadProduct();
+loadProducts();

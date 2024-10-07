@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Producto</title>
+    <title>Lista de Productos</title>
     <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/panel.css">
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/table.css">
     <!-- Íconos -->
     <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
   </head>
@@ -35,7 +35,7 @@
       <nav class="nav">
         <ul>
           <li class="nav__list">
-            <a  href="#" class="nav__link">
+            <a  href="admin.html" class="nav__link link--active">
               <i class="fa-solid fa-magnifying-glass"></i>
               <span>Buscar</span>
             </a>
@@ -47,7 +47,7 @@
             </a>
           </li>
           <li class="nav__list">
-            <a href="#" class="nav__link link--active">
+            <a href="new_product.html" class="nav__link">
               <i class="fa-solid fa-cloud-arrow-up"></i>
               <span>Nuevo</span>
             </a>
@@ -94,30 +94,34 @@
 
     <!-- CONTENIDO -->
     <main class="main" id="main">
-      <form class="form" action="../model/new_product.php" method="post" autocomplete="off" enctype="multipart/form-data">
-        <h1 class="form__title">AGREGAR PRODUCTO</h1>
-        <input class="form__input" type="text" name="name" placeholder="Nombre" required>
-        <input class="form__input" type="text" name="brand" placeholder="Marca" required>
-        <select class="form__input" name="category" id="list"></select>
-        <div class="form__file file" id="formFile">
-          <figure class="file__image">
-              <img src="" alt="" id="img">
-          </figure>
-          <div class="file__data">
-            <i class="fas fa-cloud-upload-alt"></i>
-            <p class="file__text">No se eligió ningún archivo</p>
-          </div>
-          <p class="file__name" id="fileName">Nombre del archivo</p>
+      <section class="main__form form">
+        <h1 class="form__title">Lista de Productos</h1>
+        <div class="form__group">
+          <input class="form__input" id="search" type="search" placeholder="Buscar producto">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-        <input id="inputFile" type="file" name="file" hidden required>
-        <input class="form__input" type="number" name="stock" placeholder="Stock" required>
-        <input class="form__input" type="text" name="price" placeholder="Precio" required>
-        <textarea class="form__input" name="description" rows="5" placeholder="Descripción del Producto" required></textarea>
-        <button type="submit" class="form__button">Agregar Producto</button>
-      </form>
+      </section>
+      <section class="table-container">
+        <table class="table">
+          <thead class="thead">
+            <tr>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Stock</th>
+              <th>Precio</th>
+              <th colspan="2">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tbody" class="tbody">
+          </tbody>
+        </table>
+      </section>
     </main>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/panel.js"></script>
-    <script src="../controller/new_product.js"></script>
+    <script src="../controller/product_list.js"></script>
+    <script src="js/table.js"></script>
   </body>
 </html>

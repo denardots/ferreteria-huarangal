@@ -66,6 +66,15 @@
 .tbody td {
   transition: .2s ease-in-out;
 }
+.tbody td a {
+  color: #ffd333;
+}
+.tbody td button {
+  color: #f00;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 .tbody tr.hide td {
   padding: 0;
   font: 0 / 0 sans-serif;

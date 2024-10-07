@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Producto</title>
+    <title>Modificar Producto</title>
     <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,30 +94,19 @@
 
     <!-- CONTENIDO -->
     <main class="main" id="main">
-      <form class="form" action="../model/new_product.php" method="post" autocomplete="off" enctype="multipart/form-data">
-        <h1 class="form__title">AGREGAR PRODUCTO</h1>
-        <input class="form__input" type="text" name="name" placeholder="Nombre" required>
-        <input class="form__input" type="text" name="brand" placeholder="Marca" required>
-        <select class="form__input" name="category" id="list"></select>
-        <div class="form__file file" id="formFile">
-          <figure class="file__image">
-              <img src="" alt="" id="img">
-          </figure>
-          <div class="file__data">
-            <i class="fas fa-cloud-upload-alt"></i>
-            <p class="file__text">No se eligió ningún archivo</p>
-          </div>
-          <p class="file__name" id="fileName">Nombre del archivo</p>
-        </div>
-        <input id="inputFile" type="file" name="file" hidden required>
-        <input class="form__input" type="number" name="stock" placeholder="Stock" required>
-        <input class="form__input" type="text" name="price" placeholder="Precio" required>
-        <textarea class="form__input" name="description" rows="5" placeholder="Descripción del Producto" required></textarea>
+      <form class="form" action="../model/update_product.php" method="post" autocomplete="off" enctype="multipart/form-data">
+        <h1 class="form__title">MODIFICAR PRODUCTO</h1>
+        <input type="hidden" name="code" id="formCode">
+        <input class="form__input" type="text" name="name" id="name" placeholder="Nombre" required>
+        <input class="form__input" type="text" name="brand" id="brand" placeholder="Marca" required>
+        <input class="form__input" type="number" name="stock" id="stock" placeholder="Stock" required>
+        <input class="form__input" type="text" name="price" id="price" placeholder="Precio" required>
+        <textarea class="form__input" name="description" rows="5" id="description" placeholder="Descripción del Producto" required></textarea>
         <button type="submit" class="form__button">Agregar Producto</button>
       </form>
     </main>
 
     <script src="js/panel.js"></script>
-    <script src="../controller/new_product.js"></script>
+    <script src="../controller/update_product.js"></script>
   </body>
 </html>

@@ -52,9 +52,6 @@
     }
   }
 
-  $product = new Product;
-  $connect = $product->connect();
-  $code = $product->getCode($connect);
   $name = $_POST['name'];
   $brand = $_POST['brand'];
   $category = $_POST['category'];
@@ -66,6 +63,10 @@
   $temp = $_FILES['file']['tmp_name'];
   // Creamos una variable con la ruta de nuestra directorio
   $file = '../view/assets/img/products';
+
+  $product = new Product;
+  $connect = $product->connect();
+  $code = $product->getCode($connect);
   $product->newProduct($connect, $code, $name, $brand, $category, $stock, $price, $description, $img, $temp, $file);
   $product->close($connect);
   // Redireccionamos a la lista de productos
