@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Productos</title>
+    <title>Mi Perfil</title>
     <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/panel.css">
-    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/form.css">
     <!-- Íconos -->
     <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
   </head>
@@ -47,7 +47,7 @@
             </a>
           </li>
           <li class="nav__list">
-            <a href="admin.html" class="nav__link link--active">
+            <a href="admin.html" class="nav__link">
               <i class="fa-solid fa-store"></i>
               <span>Productos</span>
             </a>
@@ -66,7 +66,7 @@
             </a>
           </li>
           <li class="nav__list">
-            <a href="profile.html" class="nav__link">
+            <a href="profile.html" class="nav__link link--active">
               <i class="fa-solid fa-user"></i>
               <span>Perfil</span>
             </a>
@@ -89,34 +89,15 @@
 
     <!-- CONTENIDO -->
     <main class="main" id="main">
-      <section class="main__form form">
-        <h1 class="form__title">Lista de Productos</h1>
-        <div class="form__group">
-          <input class="form__input" id="search" type="search" placeholder="Buscar producto">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-      </section>
-      <section class="table-container">
-        <table class="table">
-          <thead class="thead">
-            <tr>
-              <th>Código</th>
-              <th>Nombre</th>
-              <th>Categoría</th>
-              <th>Stock</th>
-              <th>Precio</th>
-              <th colspan="2">Acciones</th>
-            </tr>
-          </thead>
-          <tbody id="tbody" class="tbody">
-          </tbody>
-        </table>
-      </section>
+      <form class="form" action="../model/profile.php" method="post" autocomplete="off">
+        <h1 class="form__title">MODIFICAR PERFIL</h1>
+        <input type="hidden" name="code" id="formCode">
+        <input class="form__input" type="text" name="username" id="name" placeholder="Nuevo nombre de usuario" required>
+        <input class="form__input" type="password" name="password" id="brand" placeholder="Nueva contraseña" required>
+        <button type="submit" class="form__button">Guardar cambios</button>
+      </form>
     </main>
     
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/panel.js"></script>
-    <script src="../controller/admin.js"></script>
-    <script src="js/table.js"></script>
   </body>
 </html>

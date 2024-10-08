@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Productos</title>
+    <title>Lista de Pedidos</title>
     <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,7 @@
             </a>
           </li>
           <li class="nav__list">
-            <a href="admin.html" class="nav__link link--active">
+            <a href="admin.html" class="nav__link">
               <i class="fa-solid fa-store"></i>
               <span>Productos</span>
             </a>
@@ -60,7 +60,7 @@
           </li>
           
           <li class="nav__list">
-            <a href="orders.html" class="nav__link">
+            <a href="orders.html" class="nav__link link--active">
               <i class="fa-regular fa-square-check"></i>
               <span>Pedidos</span>
             </a>
@@ -90,11 +90,7 @@
     <!-- CONTENIDO -->
     <main class="main" id="main">
       <section class="main__form form">
-        <h1 class="form__title">Lista de Productos</h1>
-        <div class="form__group">
-          <input class="form__input" id="search" type="search" placeholder="Buscar producto">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
+        <h1 class="form__title">Lista de Pedidos</h1>
       </section>
       <section class="table-container">
         <table class="table">
@@ -114,9 +110,7 @@
       </section>
     </main>
     
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/panel.js"></script>
     <script src="../controller/admin.js"></script>
-    <script src="js/table.js"></script>
   </body>
 </html>
