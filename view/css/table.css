@@ -75,10 +75,46 @@
   border: none;
   cursor: pointer;
 }
+.tbody td .cart {
+  color: #ffd333;
+}
 .tbody tr.hide td {
   padding: 0;
   font: 0 / 0 sans-serif;
   transition: .2s ease-in-out .5s;
+}
+.tbody tr .cell-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tbody td .cart-button {
+  padding: 5px 7px;
+  background-color: #ffd333;
+  color: #000;
+  border-radius: 50%;
+}
+.tbody td .cart-delete {
+  padding: 5px 7px;
+  background-color: #f00;
+  color: #fff;
+  border-radius: 50%;
+}
+.tfoot tr {
+  background-color: #d5d1defe;
+}
+.tfoot .button {
+  padding: 7px 15px;
+  color: #3d464d;
+  background-color: #ffd333;
+  border-radius: 5px;
+  border: 2px solid #be970a;
+  outline: none;
+  cursor: pointer;
+}
+.tfoot .clear {
+  background-color: #f00;
+  color: #fff;
 }
 
 /* EFECTOS DE TABLA */
@@ -88,6 +124,18 @@
 }
 .tbody tr:hover {
   background-color: #fff6;
+}
+.tfoot .button:hover {
+  background-color: #ecbc0d;
+}
+.tfoot .button:focus {
+  background-color: #d8ab09;
+}
+.tfoot .clear:hover {
+  background-color: #cf0d0d;
+}
+.tfoot .clear:focus {
+  background-color: #990a0a;
 }
 
 /* ESTILOS LAPTOP */

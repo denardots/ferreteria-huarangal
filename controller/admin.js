@@ -26,7 +26,7 @@ const viewProducts = data => {
     deleteButton.name = product.code;
     deleteButton.value = product.name;
     deleteButton.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
-    // Listener que llama una fucnión y le envia el evento para mostrar un mensaje
+    // Listener que llama una función y le envia el evento para mostrar un mensaje
     deleteButton.addEventListener("click", e => viewMessage(e));
     cell.appendChild(deleteButton);
     row.appendChild(cell);

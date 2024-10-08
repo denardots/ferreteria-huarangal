@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Administración</title>
+    <title>Lista de Productos</title>
     <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,15 +35,9 @@
       <nav class="nav">
         <ul>
           <li class="nav__list">
-            <a  href="admin.html" class="nav__link link--active">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <span>Buscar</span>
-            </a>
-          </li>
-          <li class="nav__list">
             <a href="#" class="nav__link">
-              <i class="fa-solid fa-calendar-week"></i>
-              <span>Venta Actual</span>
+              <i class="fa-solid fa-store"></i>
+              <span>Productos</span>
             </a>
           </li>
           <li class="nav__list">
@@ -52,12 +46,7 @@
               <span>Nuevo</span>
             </a>
           </li>
-          <li class="nav__list">
-            <a href="#" class="nav__link">
-              <i class="fa-solid fa-store"></i>
-              <span>Productos</span>
-            </a>
-          </li>
+          
           <li class="nav__list">
             <a href="#" class="nav__link">
               <i class="fa-regular fa-square-check"></i>
@@ -107,9 +96,10 @@
             <tr>
               <th>Código</th>
               <th>Nombre</th>
-              <th>Marca</th>
+              <th>Categoría</th>
               <th>Stock</th>
               <th>Precio</th>
+              <th colspan="2">Acciones</th>
             </tr>
           </thead>
           <tbody id="tbody" class="tbody">
@@ -117,9 +107,10 @@
         </table>
       </section>
     </main>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/panel.js"></script>
-    <script src="../controller/product_date.js"></script>
+    <script src="../controller/admin.js"></script>
     <script src="js/table.js"></script>
   </body>
 </html>

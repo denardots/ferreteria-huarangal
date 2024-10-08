@@ -35,25 +35,19 @@
       <nav class="nav">
         <ul>
           <li class="nav__list">
-            <a  href="#" class="nav__link link--active">
+            <a  href="user.html" class="nav__link link--active">
               <i class="fa-solid fa-magnifying-glass"></i>
               <span>Buscar</span>
             </a>
           </li>
           <li class="nav__list">
-            <a href="#" class="nav__link">
+            <a href="current_sale.html" class="nav__link">
               <i class="fa-solid fa-calendar-week"></i>
               <span>Venta Actual</span>
             </a>
           </li>
           <li class="nav__list">
-            <a href="#" class="nav__link">
-              <i class="fa-regular fa-square-check"></i>
-              <span>Pedidos</span>
-            </a>
-          </li>
-          <li class="nav__list">
-            <a href="#" class="nav__link">
+            <a href="login.html" class="nav__link">
               <i class="fa-solid fa-arrow-right-from-bracket"></i>
               <span>Salir</span>
             </a>
@@ -71,9 +65,9 @@
     <!-- CONTENIDO -->
     <main class="main" id="main">
       <section class="main__form form">
-        <h1 class="form__title">Customer's Orders</h1>
+        <h1 class="form__title">Lista de Productos</h1>
         <div class="form__group">
-          <input class="form__input" type="search" placeholder="Search Data...">
+          <input class="form__input" id="search" type="search" placeholder="Buscar producto">
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </section>
@@ -81,12 +75,12 @@
         <table class="table">
           <thead class="thead">
             <tr>
-              <th>Id</th>
-              <th>Customer</th>
-              <th>Location</th>
-              <th>Order Date</th>
-              <th>Status</th>
-              <th>Amount</th>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Marca</th>
+              <th>Stock</th>
+              <th>Precio</th>
+              <th colspan="2">Acciones</th>
             </tr>
           </thead>
           <tbody id="tbody" class="tbody">
@@ -96,7 +90,7 @@
     </main>
 
     <script src="js/panel.js"></script>
-    <script src="../controller/product_date.js"></script>
+    <script src="../controller/user.js"></script>
     <script src="js/table.js"></script>
   </body>
 </html>
