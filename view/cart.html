@@ -18,18 +18,21 @@
     <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
   </head>
   <body>
-      <!-- HEADER -->
+    <!-- HEADER -->
     <header class="header">
       <a href="index.html" class="header__info">
         <img src="assets/img/logo.webp" alt="Logo" class="header__logo">
         <h1 class="header__name">EL HUARANGAL</h1>
       </a>
-      <form action="#" method="post" class="header__form">
-        <input type="text" class="header__input" placeholder="Buscar en la tienda">
-        <button type="submit" class="header__button"><i class="fa-solid fa-magnifying-glass"></i>
+      <form class="header__form" id="searchForm">
+        <input type="text" class="header__input" id="searchInput" placeholder="Buscar en la tienda">
+        <button type="submit" class="header__button">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
-      <button id="headerIcon" class="header__icon"><i class="fa-solid fa-bars"></i></button>
+      <button id="headerIcon" class="header__icon">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </header>
 
     <!-- NAVBAR -->
@@ -39,56 +42,59 @@
           <p class="categories__title"><i class="fa-solid fa-bars"></i>Categorías</p>
           <i class="fa-solid fa-caret-down"></i>
         </div>
-        <ul class="categories__list">
-          <li><a href="#" class="categories__link">Herramientas</a></li>
-          <li><a href="#" class="categories__link">Construcción</a></li>
-          <li><a href="#" class="categories__link">Carpintería</a></li>
-          <li><a href="#" class="categories__link">Electricidad</a></li>
+        <ul class="categories__list" id="categoriesMenu">
         </ul>
       </div>
       <ul class="nav__list">
-        <li><a href="#" class="nav__link">Inicio</a></li>
-        <li><a href="#" class="nav__link">Nosotros</a></li>
-        <li><a href="#" class="nav__link link--active">Productos</a></li>
+        <li><a href="index.html" class="nav__link">Inicio</a></li>
+        <li><a href="about.html" class="nav__link">Nosotros</a></li>
+        <li><a href="products.html" class="nav__link link--active">Productos</a></li>
       </ul>
       <div class="nav__icons">
         <div>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            <span class="nav__number">1</span>
+          <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          <span class="nav__number" id="menuCart">1</span>
         </div>
-        <a href="#"><i class="fa-solid fa-user"></i></a>
+        <a href="login.html"><i class="fa-solid fa-user"></i></a>
       </div>
     </nav>
 
     <!-- RESPONSIVE -->
     <nav id="responsive" class="responsive">
-      <button id="responsiveIcon" class="responsive__icon"><i class="fa-solid fa-xmark"></i>
+      <button id="responsiveIcon" class="responsive__icon">
+        <i class="fa-solid fa-xmark"></i>
       </button>
-      <form action="#" method="post" class="header__form responsive__form">
-        <input type="text" class="header__input" placeholder="Buscar en la tienda">
-        <button type="submit" class="header__button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <form class="header__form responsive__form" id="responsiveForm">
+        <input type="text" class="header__input" id="responsiveInput" placeholder="Buscar en la tienda">
+        <button type="submit" class="header__button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </form>
       <div class="nav__icons">
         <div>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            <span class="nav__number">1</span>
+          <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          <span class="nav__number" id="responsiveCart">1</span>
         </div>
         <a href="#"><i class="fa-solid fa-user"></i></a>
       </div>
       <ul class="nav__list">
-        <li><a href="#" class="nav__link">Inicio</a></li>
-        <li><a href="#" class="nav__link">Nosotros</a></li>
-        <li><a href="#" class="nav__link link--active">Productos</a></li>
+        <li><a href="index.html" class="nav__link">Inicio</a></li>
+        <li><a href="about.html" class="nav__link">Nosotros</a></li>
+        <li><a href="products.html" class="nav__link link--active">Productos</a></li>
         <li class="nav__categories categories">
           <div class="categories__menu">
             <p class="categories__title">Categorías</p>
             <i class="fa-solid fa-caret-down"></i>
           </div>
           <ul class="categories__list">
-            <li><a href="#" class="categories__link">Herramientas</a></li>
-            <li><a href="#" class="categories__link">Construcción</a></li>
-            <li><a href="#" class="categories__link">Carpintería</a></li>
-            <li><a href="#" class="categories__link">Electricidad</a></li>
+            <li><a href="products.html?id=1" class="categories__link">Construcción</a></li>
+            <li><a href="products.html?id=2" class="categories__link">Carpintería</a></li>
+            <li><a href="products.html?id=3" class="categories__link">Electricidad</a></li>
+            <li><a href="products.html?id=4" class="categories__link">Seguridad</a></li>
+            <li><a href="products.html?id=5" class="categories__link">Gasfitería</a></li>
+            <li><a href="products.html?id=6" class="categories__link">Pinturas</a></li>
+            <li><a href="products.html?id=7" class="categories__link">Limpieza</a></li>
+            <li><a href="products.html?id=8" class="categories__link">Automotriz</a></li>
           </ul>
         </li>
       </ul>
@@ -98,25 +104,15 @@
     <div class="cart-container">
       <h2 class="cart__title">Carrito de compras</h2>
       <section class="cart">
-        <article class="cart__product">
-          <img src="assets/img/products/product.webp" alt="Producto" class="cart__img">
-          <p class="cart__name">Nombre del Producto</p>
-          <p class="cart__quantity">
-            <button class="cart__icon"><i class="fa-solid fa-minus"></i></button>
-            <span class="cart__number">1</span>
-            <button class="cart__icon"><i class="fa-solid fa-plus"></i></button>
-          </p>
-          <p class="cart__subtotal">S/999.99</p>
-          <p class="cart__delete"><i class="fa-solid fa-trash"></i></p>
-        </article>
+        <div id="tbody"></div>
         <div class="cart__actions">
           <div class="cart__buy">
-            <a href="https://api.whatsapp.com/send?phone=51978634490" class="cart__whatsapp" target="_blank">
+            <button class="cart__whatsapp" id="finishButton">
               <i class="fa-brands fa-whatsapp"></i>
               <span>Continuar por Whatsapp</span>
-            </a>
+            </button>
           </div>
-          <div class="cart__total"><span class="cart__word">Total: </span>S/9999.99</div>
+          <div class="cart__total" id="cartTotal"><span class="cart__word">Total: </span>S/0.00</div>
         </div>
       </section>
     </div>
@@ -124,25 +120,25 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__nav footer__company">
-          <img src="assets/img/logo.webp" alt="logo" class="footer__logo">
-          <p><strong>Ferretería El Huarangal</strong></p>
-          <p>RUC: 20603020015</p>
+        <img src="assets/img/logo.webp" alt="logo" class="footer__logo">
+        <p><strong>Ferretería El Huarangal</strong></p>
+        <p>RUC: 20603020015</p>
       </div>
       <nav class="footer__nav">
         <h3 class="footer__title">Navegación</h3>
         <ul class="footer__list">
-          <li><a href="#" class="footer__link">Inicio</a></li>
-          <li><a href="#" class="footer__link">Nosotros</a></li>
-          <li><a href="#" class="footer__link">Productos</a></li>
+          <li><a href="index.html" class="footer__link">Inicio</a></li>
+          <li><a href="about.html" class="footer__link">Nosotros</a></li>
+          <li><a href="products.html" class="footer__link">Productos</a></li>
         </ul>
       </nav>
       <nav class="footer__nav">
         <h3 class="footer__title">Categorías</h3>
         <ul class="footer__list">
-          <li><a href="#" class="footer__link">Herramientas</a></li>
-          <li><a href="#" class="footer__link">Construcción</a></li>
-          <li><a href="#" class="footer__link">Carpintería</a></li>
-          <li><a href="#" class="footer__link">Electricidad</a></li>
+          <li><a href="products.html?id=1" class="footer__link">Construcción</a></li>
+          <li><a href="products.html?id=3" class="footer__link">Electricidad</a></li>
+          <li><a href="products.html?id=6" class="footer__link">Pinturas</a></li>
+          <li><a href="products.html?id=8" class="footer__link">Automotriz</a></li>
         </ul>
       </nav>
       <div class="footer__nav footer__contact">
@@ -150,7 +146,8 @@
         <ul class="footer__list">
           <li class="footer__info"><i class="fa-solid fa-phone"></i>941 829 053</li>
           <li class="footer__info"><i class="fa-solid fa-envelope"></i>elhuarangal@gmail.com</li>
-          <li class="footer__info"><i class="fa-solid fa-location-dot"></i>PJ Alto Selva Alegre Zona C</li>
+          <li class="footer__info"><i class="fa-solid fa-location-dot"></i>PJ Alto Selva Alegre Zona C
+          </li>
         </ul>
       </div>
     </footer>
@@ -158,5 +155,6 @@
     <div class="copyright">&copy; El Huarangal 2024. Todos los derechos reservados</div>
     <a href="https://api.whatsapp.com/send?phone=51978634490" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
     <script src="js/users.js"></script>
+    <script src="../controller/cart.js"></script>
   </body>
 </html>

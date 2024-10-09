@@ -9,11 +9,11 @@ const loadProduct = async code => {
   });
   const data = await response.json();
   // Enviamos la data a otra función para mostrar los datos del producto
-  viewProducts(data);
+  viewProduct(data);
 };
 
 // Función que recibe los datos y los muestra en el formulario
-const viewProducts = data => {
+const viewProduct = data => {
   const formCode = document.getElementById("formCode");
   const name = document.getElementById("name");
   const brand = document.getElementById("brand");

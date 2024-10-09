@@ -24,6 +24,6 @@
     $exists = $product->updateProduct($connect, $value['code'], $newStock);
     array_push($stocks, $exists);
   }
-  echo json_encode($stocks);
   // $product->close($connect);
+  echo json_encode($stocks);
 ?>

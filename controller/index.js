@@ -2,7 +2,7 @@
 
 // Función que recibe los productos
 const loadProducts = async () => {
-  let url = "../model/load_products.php";
+  let url = "../model/products.php";
   const response = await fetch(url);
   const data = await response.json();
   // Llamamos a una función y le enviamos la data para mostrar los productos
@@ -12,24 +12,30 @@ const loadProducts = async () => {
 // Función que recibe los productos y los muestra en la tabla
 const viewProducts = data => {
   data.forEach(product => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${product.code}</td>
-      <td>${product.name}</td>
-      <td>${product.brand}</td>
-      <td>${product.stock}</td>
-      <td><strong>S/ ${product.price.toFixed(2)}</strong></td>`;
+    const article = document.createElement("article");
+    article.classList.add("product");
+    article.innerHTML = `
+      <img src="${product.file}" alt="${product.name}" loading="lazy" class="product__img">
+      <div class="product__content">
+        <p>${product.name}</p>
+        <p>S/ ${product.price.toFixed(2)}</p>
+      </div>`;
     // Para agregar productos a la venta debemos crear los elementos, ya que su uso será dinámico sin redirigir a otra página
-    const cell = document.createElement("td");
+    const icons = document.createElement("div");
+    icons.classList.add("product__icons");
     const cartButton = document.createElement("button");
+    cartButton.classList.add("product__icon")
     cartButton.id = product.code;
-    cartButton.classList.add("cart");
     cartButton.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>`;
     // Listener que llama una función para obtener los datos del producto y agregarlo al carrito
     cartButton.addEventListener("click", e => loadProduct(e));
-    cell.appendChild(cartButton);
-    row.appendChild(cell);
-    tbody.appendChild(row);
+    const link = document.createElement("a");
+    link.classList.add("product__icon");
+    link.href = `product.html?code=${product.code}`;
+    link.innerHTML = `<i class="fa-solid fa-search"></i>`;
+    icons.append(cartButton, link);
+    article.appendChild(icons);
+    productContainer.appendChild(article);
   });
 };
 
@@ -48,21 +54,18 @@ const loadProduct = async e => {
 
 const addCart = data => {
   if (shopCart.some(product => product.code === data.code)) {
-    window.location.href = "current_sale.html";
+    window.location.href = "cart.html";
   } else {
     data.quantity = 1;
     data.subtotal = data.price
     shopCart.push(data);
-    localStorage.setItem("currentSale", JSON.stringify(shopCart));
+    localStorage.setItem("shopCart", JSON.stringify(shopCart));
   };
+  // Actualizamos el numero del carrito
+  updateCart();
 };
 
-const tbody = document.getElementById("tbody");
-
-let shopCart = localStorage.getItem("currentSale");
-
-// Comprobamos si existe datos en el localStorage y en caso de no haber creamos un nuevo carrito
-shopCart = shopCart ? shopCart = JSON.parse(shopCart) : shopCart = [];
+const productContainer = document.getElementById("productContainer");
 
 // Llamamos a la función que recibirá los productos del servidor
 loadProducts();

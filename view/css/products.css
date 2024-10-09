@@ -37,6 +37,7 @@
   width: fit-content;
   opacity: 0;
   transition-duration: 0.5s;
+  cursor: pointer;
 }
 .product__icon {
   margin: 0 20px;

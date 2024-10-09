@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="css/users.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/index.css">
-    <!-- Íconos -->
-    <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
+    
   </head>
   <body>
     <!-- HEADER -->
@@ -25,8 +24,8 @@
         <img src="assets/img/logo.webp" alt="Logo" class="header__logo">
         <h1 class="header__name">EL HUARANGAL</h1>
       </a>
-      <form action="#" method="post" class="header__form">
-        <input type="text" class="header__input" placeholder="Buscar en la tienda">
+      <form class="header__form" id="searchForm">
+        <input type="text" class="header__input" id="searchInput" placeholder="Buscar en la tienda">
         <button type="submit" class="header__button">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
@@ -43,24 +42,20 @@
           <p class="categories__title"><i class="fa-solid fa-bars"></i>Categorías</p>
           <i class="fa-solid fa-caret-down"></i>
         </div>
-        <ul class="categories__list">
-          <li><a href="#" class="categories__link">Herramientas</a></li>
-          <li><a href="#" class="categories__link">Construcción</a></li>
-          <li><a href="#" class="categories__link">Carpintería</a></li>
-          <li><a href="#" class="categories__link">Electricidad</a></li>
+        <ul class="categories__list" id="categoriesMenu">
         </ul>
       </div>
       <ul class="nav__list">
-        <li><a href="#" class="nav__link link--active">Inicio</a></li>
-        <li><a href="#" class="nav__link">Nosotros</a></li>
-        <li><a href="#" class="nav__link">Productos</a></li>
+        <li><a href="index.html" class="nav__link link--active">Inicio</a></li>
+        <li><a href="about.html" class="nav__link">Nosotros</a></li>
+        <li><a href="products.html" class="nav__link">Productos</a></li>
       </ul>
       <div class="nav__icons">
         <div>
-          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-          <span class="nav__number">1</span>
+          <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          <span class="nav__number" id="menuCart">1</span>
         </div>
-        <a href="#"><i class="fa-solid fa-user"></i></a>
+        <a href="login.html"><i class="fa-solid fa-user"></i></a>
       </div>
     </nav>
 
@@ -69,33 +64,37 @@
       <button id="responsiveIcon" class="responsive__icon">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <form action="#" method="post" class="header__form responsive__form">
-        <input type="text" class="header__input" placeholder="Buscar en la tienda">
+      <form class="header__form responsive__form" id="responsiveForm">
+        <input type="text" class="header__input" id="responsiveInput" placeholder="Buscar en la tienda">
         <button type="submit" class="header__button">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
       <div class="nav__icons">
         <div>
-          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-          <span class="nav__number">1</span>
+          <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          <span class="nav__number" id="responsiveCart">1</span>
         </div>
         <a href="#"><i class="fa-solid fa-user"></i></a>
       </div>
       <ul class="nav__list">
-        <li><a href="#" class="nav__link link--active">Inicio</a></li>
-        <li><a href="#" class="nav__link">Nosotros</a></li>
-        <li><a href="#" class="nav__link">Productos</a></li>
+        <li><a href="index.html" class="nav__link link--active">Inicio</a></li>
+        <li><a href="about.html" class="nav__link">Nosotros</a></li>
+        <li><a href="products.html" class="nav__link">Productos</a></li>
         <li class="nav__categories categories">
           <div class="categories__menu">
             <p class="categories__title">Categorías</p>
             <i class="fa-solid fa-caret-down"></i>
           </div>
           <ul class="categories__list">
-            <li><a href="#" class="categories__link">Herramientas</a></li>
-            <li><a href="#" class="categories__link">Construcción</a></li>
-            <li><a href="#" class="categories__link">Carpintería</a></li>
-            <li><a href="#" class="categories__link">Electricidad</a></li>
+            <li><a href="products.html?id=1" class="categories__link">Construcción</a></li>
+            <li><a href="products.html?id=2" class="categories__link">Carpintería</a></li>
+            <li><a href="products.html?id=3" class="categories__link">Electricidad</a></li>
+            <li><a href="products.html?id=4" class="categories__link">Seguridad</a></li>
+            <li><a href="products.html?id=5" class="categories__link">Gasfitería</a></li>
+            <li><a href="products.html?id=6" class="categories__link">Pinturas</a></li>
+            <li><a href="products.html?id=7" class="categories__link">Limpieza</a></li>
+            <li><a href="products.html?id=8" class="categories__link">Automotriz</a></li>
           </ul>
         </li>
       </ul>
@@ -137,117 +136,7 @@
     <!-- PRODUCTOS -->
     <section class="products">
       <h2 class="products__title">PRODUCTOS DESTACADOS</h2>
-      <div class="product-container">
-        <article class="product">
-          <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-          <div class="product__content">
-            <p>Nombre del Producto</p>
-            <p>S/99.99</p>
-          </div>
-          <div class="product__icons">
-            <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-            <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-          </div>
-        </article>
-        <article class="product">
-          <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-          <div class="product__content">
-            <p>Nombre del Producto</p>
-            <p>S/99.99</p>
-          </div>
-          <div class="product__icons">
-            <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-            <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-          </div>
-        </article>
-        <article class="product">
-          <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-          <div class="product__content">
-            <p>Nombre del Producto</p>
-            <p>S/99.99</p>
-          </div>
-          <div class="product__icons">
-            <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-            <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-          </div>
-        </article>
-        <article class="product">
-          <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-          <div class="product__content">
-            <p>Nombre del Producto</p>
-            <p>S/99.99</p>
-          </div>
-          <div class="product__icons">
-            <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-            <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-          </div>
-        </article>
-        <article class="product">
-          <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-          <div class="product__content">
-            <p>Nombre del Producto</p>
-            <p>S/99.99</p>
-          </div>
-          <div class="product__icons">
-            <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-            <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-          </div>
-        </article>
-        <article class="product">
-          <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-          <div class="product__content">
-            <p>Nombre del Producto</p>
-            <p>S/99.99</p>
-          </div>
-          <div class="product__icons">
-            <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-            <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-          </div>
-        </article>
-        <article class="product">
-          <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-          <div class="product__content">
-            <p>Nombre del Producto</p>
-            <p>S/99.99</p>
-          </div>
-          <div class="product__icons">
-            <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-            <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-          </div>
-        </article>
-        <article class="product">
-          <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-          <div class="product__content">
-            <p>Nombre del Producto</p>
-            <p>S/99.99</p>
-          </div>
-          <div class="product__icons">
-            <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-            <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-          </div>
-        </article>
-        <article class="product">
-          <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-          <div class="product__content">
-            <p>Nombre del Producto</p>
-            <p>S/99.99</p>
-          </div>
-          <div class="product__icons">
-            <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-            <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-          </div>
-        </article>
-        <article class="product">
-          <img src="assets/img/products/product.webp" alt="producto" loading="lazy" class="product__img">
-          <div class="product__content">
-            <p>Nombre del Producto</p>
-            <p>S/99.99</p>
-          </div>
-          <div class="product__icons">
-            <button class="product__icon"><i class="fa-solid fa-cart-shopping"></i></button>
-            <a href="#" class="product__icon"><i class="fa-solid fa-search"></i></a>
-          </div>
-        </article>
+      <div class="product-container" id="productContainer">
       </div>
     </section>
 
@@ -327,18 +216,18 @@
       <nav class="footer__nav">
         <h3 class="footer__title">Navegación</h3>
         <ul class="footer__list">
-          <li><a href="#" class="footer__link">Inicio</a></li>
-          <li><a href="#" class="footer__link">Nosotros</a></li>
-          <li><a href="#" class="footer__link">Productos</a></li>
+          <li><a href="index.html" class="footer__link">Inicio</a></li>
+          <li><a href="about.html" class="footer__link">Nosotros</a></li>
+          <li><a href="products.html" class="footer__link">Productos</a></li>
         </ul>
       </nav>
       <nav class="footer__nav">
         <h3 class="footer__title">Categorías</h3>
         <ul class="footer__list">
-          <li><a href="#" class="footer__link">Herramientas</a></li>
-          <li><a href="#" class="footer__link">Construcción</a></li>
-          <li><a href="#" class="footer__link">Carpintería</a></li>
-          <li><a href="#" class="footer__link">Electricidad</a></li>
+          <li><a href="products.html?id=1" class="footer__link">Construcción</a></li>
+          <li><a href="products.html?id=3" class="footer__link">Electricidad</a></li>
+          <li><a href="products.html?id=6" class="footer__link">Pinturas</a></li>
+          <li><a href="products.html?id=8" class="footer__link">Automotriz</a></li>
         </ul>
       </nav>
       <div class="footer__nav footer__contact">
@@ -354,6 +243,9 @@
     
     <div class="copyright">&copy; El Huarangal 2024. Todos los derechos reservados</div>
     <a href="https://api.whatsapp.com/send?phone=51978634490" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    <!-- Íconos -->
+    <script src="https://kit.fontawesome.com/dd474d89cd.js" crossorigin="anonymous"></script>
     <script src="js/users.js"></script>
+    <script src="../controller/index.js"></script>
   </body>
 </html>

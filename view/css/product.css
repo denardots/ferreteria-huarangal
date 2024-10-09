@@ -32,6 +32,7 @@
   padding: 7px 10px;
   background-color: var(--nav-link-hover);
   border: 3px solid var(--nav-link);
+  cursor: pointer;
 }
 .product__quantity {
   margin: 0 9px;
