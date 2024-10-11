@@ -29,13 +29,13 @@ const loadCart = shopCart => {
     const lessButton = document.createElement("button");
     lessButton.id = product.code;
     lessButton.classList.add("cart-button");
-    lessButton.innerHTML = `<i class="fa-solid fa-minus"></i>`;
+    lessButton.textContent = "-";
     // Listener que llama una función para disminuir la cantidad en el carrito
     lessButton.addEventListener("click", e => lessProduct(e));
     const plusButton = document.createElement("button");
     plusButton.id = product.code;
     plusButton.classList.add("cart-button");
-    plusButton.innerHTML = `<i class="fa-solid fa-plus"></i>`;
+    plusButton.textContent = "+";
     // Listener que llama una función para aumentar la cantidad en el carrito
     plusButton.addEventListener("click", e => plusProduct(e));
     const quantity = document.createElement("div");
@@ -43,7 +43,7 @@ const loadCart = shopCart => {
     quantity.value = product.quantity
     cell.append(lessButton, quantity, plusButton);
     const deleteCell = document.createElement("td");
-    const deleteButton = document.createElement("button");
+    const deleteButton = document.createElement("p");
     deleteButton.id = product.code;
     deleteButton.classList.add("cart-delete");
     deleteButton.innerHTML = `<i class="fa-solid fa-trash"></i>`;
@@ -59,9 +59,9 @@ const loadCart = shopCart => {
 
 // Función para aumentar la cantidad de productos
 const plusProduct = e => {
-  let code = e.target.parentNode.id;
-  let amount = e.target.parentNode.previousSibling;
-  let subtotal = e.target.parentNode.parentNode.previousSibling;
+  let code = e.target.id;
+  let amount = e.target.previousSibling;
+  let subtotal = e.target.parentNode.nextSibling;
   const index = shopCart.findIndex(product => product.code === code);
   if (amount.value >= shopCart[index].stock ) {
     console.log("lleno");
@@ -78,9 +78,9 @@ const plusProduct = e => {
 
 // Función para reducir la cantidad de productos
 const lessProduct = e => {
-  let code = e.target.parentNode.id;
-  let amount = e.target.parentNode.nextSibling;
-  let subtotal = e.target.parentNode.parentNode.previousSibling;
+  let code = e.target.id;
+  let amount = e.target.nextSibling;
+  let subtotal = e.target.parentNode.nextSibling;
   const index = shopCart.findIndex(product => product.code === code);
   if (amount.value <= 1 ) {
     console.log("vacio");
@@ -113,7 +113,12 @@ const deleteProduct = e => {
 
 // Función asíncrona para finalizar la venta
 const finishSale = async () => {
-  let url = "../model/finish_sale.php";
+  let url = "../model/update_stocks.php";
+  await fetch(url, {
+    method: "POST",
+    body: JSON.stringify(shopCart)
+  });
+  url = "../model/finish_sale.php";
   await fetch(url, {
     method: "POST",
     body: JSON.stringify(shopCart)

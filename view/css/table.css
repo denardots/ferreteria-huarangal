@@ -89,16 +89,25 @@
   gap: 10px;
 }
 .tbody td .cart-button {
-  padding: 5px 7px;
+  font-size: 25px;
+  font-weight: 500;
+  width: 30px;
   background-color: #ffd333;
   color: #000;
   border-radius: 50%;
 }
 .tbody td .cart-delete {
+  width: fit-content;
   padding: 5px 7px;
   background-color: #f00;
   color: #fff;
   border-radius: 50%;
+  cursor: pointer;
+}
+.tbody td .order {
+  font-weight: 500;
+  text-decoration: none;
+  color: green;
 }
 .tfoot tr {
   background-color: #d5d1defe;

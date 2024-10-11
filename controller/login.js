@@ -11,7 +11,7 @@ const login = async e => {
   });
   const data = await response.json();
   // Si los datos son incorrectos mostramos un mensaje al usuario, en caso de ser correctos llamamos a una función para redirigir al usuario
-  data === "Datos Incorrectos" ? message.textContent = "Datos Incorrectos" :window.location.href = "admin.html";
+  data === "Datos Incorrectos" ? message.textContent = "Datos Incorrectos" : window.location.href = "user.html";
 };
 
 const form = document.getElementById("form");

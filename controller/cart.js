@@ -3,6 +3,7 @@
 const checkCart = () => {
   if (shopCart) {
     shopCart = JSON.parse(shopCart);
+    finishButton.disabled = false;
     loadCart(shopCart);
   } else {
     const article = document.createElement("article");
@@ -112,14 +113,18 @@ const deleteProduct = e => {
 
 // Función asíncrona para finalizar la venta
 const generateOrder = async () => {
-  // let url = "../model/finish_sale.php";
-  // await fetch(url, {
-  //   method: "POST",
-  //   body: JSON.stringify(shopCart)
-  // });
-  // localStorage.removeItem("currentSale");
-  // window.location.href = "current_sale.html";
-  console.log("df")
+  let url = "../model/generate_order.php";
+  const response = await fetch(url, {
+    method: "POST",
+    body: JSON.stringify(shopCart)
+  });
+  const data = await response.json();
+  console.log(data)
+  // Redireccionamos al WhatsApp con el código del pedido
+  localStorage.removeItem("shopCart");
+  window.open(`https://wa.me/51941829053?text=Tengo+el+pedido+${data}`);
+  window.location.href = "cart.html";
+
 };
 
 const tbody = document.getElementById("tbody");

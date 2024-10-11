@@ -58,11 +58,16 @@
               <span>Nuevo</span>
             </a>
           </li>
-          
           <li class="nav__list">
             <a href="orders.html" class="nav__link link--active">
               <i class="fa-regular fa-square-check"></i>
               <span>Pedidos</span>
+            </a>
+          </li>
+          <li class="nav__list">
+            <a href="sales.html" class="nav__link">
+              <i class="fa-solid fa-check"></i>
+              <span>Ventas</span>
             </a>
           </li>
           <li class="nav__list">
@@ -90,18 +95,17 @@
     <!-- CONTENIDO -->
     <main class="main" id="main">
       <section class="main__form form">
-        <h1 class="form__title">Lista de Pedidos</h1>
+        <h1 class="form__title">Lista de Pedidos Pendientes</h1>
       </section>
       <section class="table-container">
         <table class="table">
           <thead class="thead">
             <tr>
               <th>Código</th>
-              <th>Nombre</th>
-              <th>Categoría</th>
-              <th>Stock</th>
-              <th>Precio</th>
-              <th colspan="2">Acciones</th>
+              <th>Fecha</th>
+              <th>Nº Productos</th>
+              <th>Total</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody id="tbody" class="tbody">
@@ -111,6 +115,6 @@
     </main>
     
     <script src="js/panel.js"></script>
-    <script src="../controller/admin.js"></script>
+    <script src="../controller/orders.js"></script>
   </body>
 </html>
