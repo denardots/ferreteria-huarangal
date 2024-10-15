@@ -61,7 +61,7 @@ const loadCart = shopCart => {
 const plusProduct = e => {
   let code = e.target.id;
   let amount = e.target.previousSibling;
-  let subtotal = e.target.parentNode.nextSibling;
+  let subtotal = e.target.parentNode.previousSibling;
   const index = shopCart.findIndex(product => product.code === code);
   if (amount.value >= shopCart[index].stock ) {
     console.log("lleno");
@@ -80,7 +80,7 @@ const plusProduct = e => {
 const lessProduct = e => {
   let code = e.target.id;
   let amount = e.target.nextSibling;
-  let subtotal = e.target.parentNode.nextSibling;
+  let subtotal = e.target.parentNode.previousSibling;
   const index = shopCart.findIndex(product => product.code === code);
   if (amount.value <= 1 ) {
     console.log("vacio");
