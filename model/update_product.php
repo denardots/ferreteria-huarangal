@@ -32,5 +32,5 @@
   $product->updateProduct($connect, $code, $name, $stock, $price, $description);
   $product->close($connect);
   // Finalmente redireccionamos a la lista de productos
-  header('location:../view/product_list.html');
+  header('location:../view/admin.html');
 ?>
