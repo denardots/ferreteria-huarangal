@@ -28,10 +28,11 @@ const viewHistory = data => {
   title.textContent = `Venta Nº: ${data.code}`;
   dateCell.textContent = `FECHA: ${data.date}`;
   totalCell.innerHTML = `<strong>S/ ${data.price.toFixed(2)}</strong>`;
-  const returnButton = document.createElement("button");
+  const returnButton = document.createElement("a");
+  returnButton.href = `pdf/PruebaV.php?code=${data.code}`;
+  returnButton.target = "__blank";
   returnButton.classList.add("button");
-  returnButton.textContent = "Volver";
-  returnButton.addEventListener("click", () => window.location.href = "sales.html");
+  returnButton.innerHTML = `<i class="fa-solid fa-file-pdf"></i> Generar Reporte`;
   buttons.append(returnButton);
 };
 

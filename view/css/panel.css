@@ -13,6 +13,9 @@ body{
   width: 100%;
   background-color: #dfdddd;
 }
+a {
+  text-decoration: none;
+}
 
 /* ESTILOS DE MENÚ */
 .menu, .aside {
